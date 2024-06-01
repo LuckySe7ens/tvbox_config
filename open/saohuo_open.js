@@ -1,4 +1,4 @@
-import { load, _ } from './lib/cat.js';
+import { load, _ } from 'assets://js/lib/cat.js';
 //发布地址：http://shapp.us/
 let key = 'saohuo';
 let HOST = 'https://saohuo.us';
