@@ -24,7 +24,7 @@
         "key": "saohuo",
         "name": "骚火影视",
         "type": 3,
-        "api": "saohuo_open.js"
+        "api": "https://0.ant-video.dedyn.io/https://github.com/LuckySe7ens/tvbox_config/raw/master/open/saohuo_open.js"
    },
     {
        "key": "nongmin",
