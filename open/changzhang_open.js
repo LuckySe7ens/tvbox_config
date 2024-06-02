@@ -7,7 +7,7 @@ import { Crypto, load, _ } from './lib/cat.js';
  */
 var charStr = 'abacdefghjklmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789';
 let COOKIE = 'PHPSESSID=' + randStr(26, true);
-let siteUrl = 'https://www.czzy55.com';
+let siteUrl = 'https://czzy.top';
 let siteKey = '';
 let siteType = 0;
 COOKIE = 'PHPSESSID=gbk1aeo1ron2g5bcuasbrbe0a7; cf_clearance=rfmFuox8XopyxGkTd66IrfiBPYPOLQ5nWyY5J7ydhB8-1704875087-0-2-da940062.5bc4175f.8d955f82-150.0.0';
