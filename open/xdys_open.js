@@ -3,7 +3,7 @@ import { Crypto, load, _ } from './lib/cat.js';
 // 兄弟影视发布页 https://xdys.vip/
 let key = 'xdys';
 let HOST = 'https://www.brovod.com';
-const parseUrl = 'https://play.brovod.com/player/ec.php?code=qw&if=1&url=';
+const parseUrl = 'https://play.brovod.com/?url=';
 const parseUrl2 = 'https://pl.qcheng.cc/hktvpc.php?url=';
 let parseMap = {};
 let siteKey = '';
@@ -174,13 +174,24 @@ async function play(flag, id, flags) {
             }
         } else {
             const reqUrl = parseUrl + playUrl;
-            const parseHtml = await request(reqUrl);
-            const matches = parseHtml.match(/let ConFig = {([\w\W]*)},box/);
-            if (!_.isEmpty(matches)) {
-                const configJson = '{' + matches[1].trim() + '}';
-                const config = JSON.parse(configJson);
-                playUrl = decryptUrl(config);
+            const res = await req('https://api.xdys.vip/lx/post.php', {
+                data: playUrl, 
+                method: 'post', 
+                headers: {
+                    'Content-Type': 'text/plain'
+                },
+            });
+            //console.log('res', res);
+            if (res) {
+                playUrl = JSON.parse(res.content).url;
             }
+            // const parseHtml = await request(reqUrl);
+            // const matches = parseHtml.match(/let ConFig = {([\w\W]*)},box/);
+            // if (!_.isEmpty(matches)) {
+            //     const configJson = '{' + matches[1].trim() + '}';
+            //     const config = JSON.parse(configJson);
+            //     playUrl = decryptUrl(config);
+            // }
         }
         
     }
