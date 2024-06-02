@@ -24,7 +24,7 @@
         "key": "saohuo",
         "name": "骚火影视",
         "type": 3,
-        "api": "https://0.ant-video.dedyn.io/https://github.com/LuckySe7ens/tvbox_config/raw/master/open/saohuo_open.js"
+        "api": "saohuo_open.js"
    },
     {
        "key": "nongmin",
@@ -66,7 +66,7 @@
        "key": "bdys",
        "name": "哔滴哔滴",
        "type": 3,
-       "api": "bdys_open.js"
+       "api": "bdys10_open.js"
    },
    {
         "key": "moli",
