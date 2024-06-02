@@ -70,7 +70,7 @@ async function detail(id) {
     const playFroms = _.map($('ul.from_list > li'), item => {
         return $(item).text();
     }).join('$$$');
-    const playUrls = _.map($('ul.play_list > li'), list => {
+    const playUrls = _.map($('ul#play_link > li'), list => {
         return _.map($(list).find('a'), item => {
             return $(item).text() + '$' + $(item).attr('href');
         }).join('#');
