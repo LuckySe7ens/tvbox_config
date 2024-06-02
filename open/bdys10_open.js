@@ -1,4 +1,5 @@
-import { Crypto, load, _ } from './lib/cat.js';
+import { Crypto, load, _, html } from './lib/cat.js';
+
 let siteUrl ='https://www.yjys01.com';
 let siteKey = '';
 let siteType = 0;
@@ -57,7 +58,7 @@ async function category(tid, pg, filter, ext) {
         url = url + '&area=' + area;
     }
     if(year) {
-        url = url + 'year=' + year;
+        url = url + '&year=' + year;
     }
     
     let videos = await getVideos(url);
@@ -194,7 +195,8 @@ function base64Decode(text) {
 
 async function genFilterObj() {
     const url = siteUrl + '/s/all';
-    const $ = load(await request(url));
+    const html = await request(url);
+    const $ = load(html);
     let types = _.map($('dl:nth-child(2) > dd > a'), item => {
         return {
             'v': $(item).attr('href').split(';')[0],
@@ -204,15 +206,16 @@ async function genFilterObj() {
     let areas = _.map($('dl:nth-child(3) > dd > a'), item => {
         return {
             'n': $(item).text(),
-            'v': $(item).text(),
+            'v': $(item).text().replace('不限',''),
         }
     });
     let years = _.map($('dl:nth-child(4) > dd > a'), item => {
         return {
             'n': $(item).text(),
-            'v': $(item).text(),
+            'v': $(item).text().replace('不限',''),
         }
     });
+
     return {
         '0': [{'key': 'type', 'name': '类型', 'init': '/s/all','value': types}, 
             {'key': 'area', 'name': '地区', 'value': areas}, 
