@@ -1,12 +1,13 @@
     import { Crypto, load, _ } from './lib/cat.js';
 
-    let siteUrl = 'https://m.xiangdao.me';
+    //let siteUrl = 'https://m.xiangdao.me';
     //let siteUrl ='https://v.nmvod.cn';
+    let siteUrl = 'https://wwgz.cn';
     let siteKey = '';
     let siteType = 0;
     let headers = {
-        'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
-        //'Referer': siteUrl + '/'
+        //'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+        'Referer': siteUrl + '/'
     };
     let PARSE_URL = 'https://api.cnmcom.com/webcloud/relay.php';
     
@@ -94,17 +95,17 @@
         try {
             const html = await request(siteUrl + id);
             let $ = load(html);
-            let content = $('article > p').text();
-            let director = _.map($('section.page-bd > div:nth-child(2) > a'), (n) => {
+            let content = $('.jjie').text();
+            let director = _.map($('.d_z_y:eq(0) font a'), (n) => {
                 return $(n).text();
             }).join(' ');
-            let actor = _.map($('section.page-bd > div:nth-child(3) > a'), (n) => {
+            let actor = _.map($('.d_z_y:eq(1) font a'), (n) => {
                 return $(n).text();
             }).join(' ');
 
-            let play1Url = siteUrl + $('div.page-btn > span:nth-child(1) > a').attr('href');
+            let play1Url = siteUrl + $('.soyurl ul li a').attr('href');
             $ = load(await request(play1Url));
-            let nameUrls = $('section.main > div > script:nth-child(1)').text().split("mac_url='")[1].split("';")[0];
+            let nameUrls = $('div.player > script:nth-child(1)').text().split("mac_url='")[1].split("';")[0];
             let playUrls = [];
             let playFroms = [];
             if($('div.hd > ul > li > a').text().indexOf('云播') >= 0) {
@@ -135,16 +136,17 @@
         let url = siteUrl + '/index.php?m=vod-search';
         const html = await request(url, {wd: wd}, true);
         const $ = load(html);
-        let data = $('#data_list > li');
-        let videos = _.map(data, (n) => {
-            let id = $($(n).find('div.pic > a')[0]).attr('href');
-            let pic = $($(n).find('div.pic > a > img')[0]).attr('data-src');
-            let name = $($(n).find(' span.sTit')[0]).text();
+        const cards = $('ul.list_01 li')
+        let videos = _.map(cards, (n) => {
+            let id = $($(n).find('a')[0]).attr('href');
+            let name = $($(n).find('a')[0]).attr('title');
+            let pic = $($(n).find('img')[0]).attr('src');
+            let remarks = $($(n).find('font')[0]).text().trim();
             return {
                 vod_id: id,
                 vod_name: name,
                 vod_pic: pic,
-                vod_remarks: '',
+                vod_remarks: remarks,
             };
         });
         return JSON.stringify({
@@ -154,7 +156,14 @@
 
     async function play(flag, id, flags) {
         let playUrl = id;
-        const html = await request(playUrl);
+        const html = (await req(playUrl, {
+            method: 'get',
+            headers: {
+                'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
+                'Referer': PARSE_URL + '?',
+            }
+        })).content;
+        //const html = await request(playUrl);
         const $ = load(html);
         for(const n of $('script')) {
             if($(n).text().indexOf("url: '") >= 0) {
@@ -200,12 +209,12 @@
     async function getRecommend(url) {
         const html = await request(url);
         const $ = load(html);
-        const cards = $('div > ul.resize_list > li:nth-child(2)')
+        const cards = $('ul.list_06 li')
         let videos = _.map(cards, (n) => {
             let id = $($(n).find('a')[0]).attr('href');
             let name = $($(n).find('a')[0]).attr('title');
             let pic = $($(n).find('img')[0]).attr('src');
-            let remarks = $($(n).find('span.sBottom > span')[0]).text().trim().replaceAll('0.0', '');
+            let remarks = $($(n).find('font')[0]).text().trim().replaceAll('0.0', '');
             return {
                 vod_id: id,
                 vod_name: name,
@@ -219,12 +228,12 @@
     async function getVideos(url) {
         const html = await request(url);
         const $ = load(html);
-        const cards = $('div > ul.resize_list > li')
+        const cards = $('ul.list_01 li')
         let videos = _.map(cards, (n) => {
             let id = $($(n).find('a')[0]).attr('href');
             let name = $($(n).find('a')[0]).attr('title');
             let pic = $($(n).find('img')[0]).attr('src');
-            let remarks = $($(n).find('span.sBottom > span > em')[0]).text().trim();
+            let remarks = $($(n).find('font')[0]).text().trim();
             return {
                 vod_id: id,
                 vod_name: name,
