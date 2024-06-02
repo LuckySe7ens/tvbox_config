@@ -1,6 +1,6 @@
 import { Crypto, load, _ } from './lib/cat.js';
 
-let siteUrl ='https://www.yjys.me';
+let siteUrl ='https://www.yjys01.me';
 let siteKey = '';
 let siteType = 0;
 let headers = {
