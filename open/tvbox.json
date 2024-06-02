@@ -67,7 +67,7 @@
        "key": "bdys",
        "name": "哔滴哔滴",
        "type": 3,
-       "api": "./bdys_open.js"
+       "api": "./bdys10_open.js"
    },
    {
         "key": "moli",
