@@ -186,7 +186,7 @@ async function play(flag, id, flags) {
                 headers: headers,
             })
         ).content;
-        console.log('iframe', iframeHtml);
+        //console.log('iframe', iframeHtml);
         let code = iframeHtml.split('"data":"')[1].split('"')[0]
             .split('')
             .reverse()
