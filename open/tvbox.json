@@ -2,16 +2,9 @@
   "spider": "https://8943.kstore.space/custom_spider.jar",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
-    {
-        "key": "douban",
-        "name": "公众号[蹲街捏蚂蚁]免费分享",
-        "type": 3,
-        "api": "./douban_open.js",
-        "indexs":1
-   },
    {
         "key": "ng",
-        "name": "南瓜影视",
+        "name": "公众号[蹲街捏蚂蚁]免费分享",
         "type": 3,
         "api": "./nangua_open.js"
    },
