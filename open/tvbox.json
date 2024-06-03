@@ -3,16 +3,10 @@
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
    {
-        "key": "ng",
+        "key": "nm",
         "name": "公众号[蹲街捏蚂蚁]免费分享",
         "type": 3,
-        "api": "./nangua_open.js"
-   },
-      {
-       "key": "tiantian",
-       "name": "天天影视",
-       "type": 3,
-       "api": "./tiantian_open.js"
+        "api": "./nongmin_open.js"
    },
    {
         "key": "saohuo",
@@ -21,10 +15,10 @@
         "api": "./saohuo_open.js"
    },
     {
-       "key": "nongmin",
+       "key": "ng",
        "name": "农民影视",
        "type": 3,
-       "api": "./nongmin_open.js"
+       "api": "./nangua_open.js"
    },
    {
         "key": "nkvod",
