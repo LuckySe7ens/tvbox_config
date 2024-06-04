@@ -16,9 +16,15 @@
    },
     {
        "key": "ng",
-       "name": "农民影视",
+       "name": "南瓜影视",
        "type": 3,
        "api": "./nangua_open.js"
+   },
+    {
+       "key": "tiantian",
+       "name": "天天影视",
+       "type": 3,
+       "api": "./tiantian_open.js"
    },
    {
         "key": "nkvod",
