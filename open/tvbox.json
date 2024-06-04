@@ -24,7 +24,7 @@
        "key": "tiantian",
        "name": "天天影视",
        "type": 3,
-       "api": "https://gh.con.sh/https://raw.githubusercontent.com/LuckySe7ens/tvbox_config/master/open/tiantian_open.js"
+       "api": "./tiantian_open.js"
    },
    {
         "key": "nkvod",
