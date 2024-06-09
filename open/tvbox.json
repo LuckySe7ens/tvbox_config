@@ -30,8 +30,8 @@
        "key": "jpyy",
        "name": "金牌影视",
        "type": 3,
-       "api": "./leospring_open.js",
-       "ext": 'https://8943.kstore.space/jpyy.rule'
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/jpyy.rule"
    },
    {
         "key": "nkvod",
