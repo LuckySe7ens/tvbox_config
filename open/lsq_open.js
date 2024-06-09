@@ -495,37 +495,53 @@ async function play(flag, id, flags) {
     if (url.startsWith('/')) {
         url = HOST + url;
     }
-    let playUrl = url;
-    const html = await request(url);
-    const json = getPlay4aJson;
-    if (json) {
-        let js = JSON.parse(json);
-        playUrl = js.url;
-        if (js.encrypt == 1) {
-            playUrl = unescape(playUrl);
-        } else if (js.encrypt == 2) {
-            playUrl = unescape(base64Decode(playUrl));
-        }
-    }
-    
-    if (rule.lazy) {
-        const split = rule.lazy.split('||');
-        for(let i = 0; i < split.length; i++) {
-            if(split[i].indexOf('request(') >= 0) {
-                html = await eval(split[i]);
-            } else {
-                eval(split[i]);
-            }
-        }
-    }
-    if(/\.(m3u8|mp4|m4a)$/.test(playUrl.split('?'))) {
-        return JSON.stringify({
+    playUrl = url;
+    if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?'))) {
+        return {
             parse: 0,
             url: playUrl,
             header: {
                 'User-Agent': UA,
             }
-        }); 
+        }; 
+    }
+    try {
+        html = await request(url);
+        const json = getPlay4aJson(html);
+        if (json) {
+            let js = JSON.parse(json);
+            playUrl = js.url;
+            if (js.encrypt == 1) {
+                playUrl = unescape(playUrl);
+            } else if (js.encrypt == 2) {
+                playUrl = unescape(base64Decode(playUrl));
+            }
+        }
+        if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?'))) {
+            return JSON.stringify({
+                parse: 0,
+                url: playUrl,
+                header: {
+                    'User-Agent': UA,
+                }
+            }); 
+        }
+    } catch(error) {
+        console.log(error);
+    }
+    if (rule.lazy) {
+        try {
+            await evalCustomerJs(rule.lazy);
+            return {
+                parse: 0,
+                url: playUrl,
+                header: {
+                    'User-Agent': UA,
+                }
+            }; 
+        } catch(error) {
+            console.log(error);
+        }
     }
     return JSON.stringify({
         parse: 1,
