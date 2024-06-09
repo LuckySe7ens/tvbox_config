@@ -20,6 +20,7 @@ let siteType = 0;
 let COOKIE = 'PHPSESSID=' + randStr(26, true);
 let maxRetryTime = 5;
 let currentRetryTime = 0;
+let parseUrl = [];
 
 // var rule = {
 //     title:'',//规则标题,没有实际作用,但是可以作为cms类名称依据
@@ -169,6 +170,9 @@ let currentRetryTime = 0;
 //     `,
 // }
 var rule = {};
+let ext;
+let videos = [];
+let playUrl = '';
 async function request(reqUrl, timeout = 20000) {
     let res = await req(reqUrl, {
         method: 'get',
@@ -189,13 +193,13 @@ async function init(cfg) {
     if (cfg.ext) {
         await parseRule(cfg.ext);//解析规则
     }
-    html = await request(HOST);
-    if (html.indexOf('document.cookie = ')  > 0) {
-        COOKIE = html.match(/document.cookie = "(.*?)"/)[1];
-        //console.log('cookie', COOKIE);
+    if (rule.initHost) {
+        html = await request(HOST);
+        if (html.indexOf('document.cookie = ')  > 0) {
+            COOKIE = html.match(/document.cookie = "(.*?)"/)[1];
+            html = await request(HOST);
+        }
     }
-    html = await request(HOST);
-    
     //await parseHost();//解析HOST主页地址
 }
 
@@ -207,20 +211,18 @@ async function parseRule(ext) {
     } else {
         rule = ext;
     }
-    //console.log('rule', rule);
-    await parseHost(rule);
+    await parseHost();
     
     
 }
 
-async function parseHost(rule) {
-    //console.log('rule', rule);
-    //rule.hostJs = 'const host = "http://baidu.com";request(host)||console.log("html", html)'
-    //console.log('host', rule.host);
+async function parseHost() {
     if(rule.host) {
         HOST = rule.host;
-    } else if(rule.hostJs) {       
-        const split = rule.hostJs.split('||');
+    } 
+    const initParse = rule.initJs || rule.hostJs;
+     if(initParse) {       
+        const split = initParse.split('||');
         for(let i = 0; i < split.length; i++) {
             if(split[i].indexOf('request(') >= 0) {
                 html = await eval(split[i]);
@@ -229,7 +231,6 @@ async function parseHost(rule) {
             }
         }
     }
-    //console.log('HOST', HOST);
 }
 
 async function home(filter) {
@@ -250,8 +251,6 @@ async function home(filter) {
             html = await request(homeUrl);
             
         }
-        //console.log('homeUrl', homeUrl);
-        //console.log('html', html);
         const $ = load(html);
         const split = rule.class_parse.split(';');
         _.forEach($(split[0]), item => {
@@ -260,9 +259,11 @@ async function home(filter) {
             classes.push({'type_id':typeId,'type_name':typeName});
         });
     }
-
     if (rule.filter) {
         filterObj = rule.filter;
+    }
+    if (rule.homeJS) {
+        eval(rule.homeJS);
     }
 
     //let classes = [{'type_id':1,'type_name':'电影'},{'type_id':2,'type_name':'电视剧'},{'type_id':3,'type_name':'综艺'},{'type_id':4,'type_name':'动漫'},{'type_id':63,'type_name':'纪录片'}];
@@ -281,7 +282,6 @@ async function home(filter) {
  * parse：子节点表达式&&值属性&&正则表达式
  */
 function getCssVal($, item, parse) {
-    console.log('parse', parse);
     if (!parse) return '';
     let xpa = parse.split('&&');
     if (!xpa || xpa.length < 2) return '';
@@ -297,12 +297,9 @@ function getCssVal($, item, parse) {
     }
     
     let v = '';
-    //console.log('xpa[1]', xpa[1]);
     if (xpa[1].indexOf('||') > 0) {
         const attrs = xpa[1].split('||');
-        console.log('attrs', attrs);
         v = $(el).attr(attrs[0]) || $(el).attr(attrs[1]);
-        console.log('v', v);
         
     } else if(xpa[1] == 'Text') {
         v = $(el).text().trim();
@@ -332,13 +329,10 @@ function getCssValArray($, item, parse) {
     } else {
         el = $(xpa[0]);
     }
-    console.log('xpa', xpa);
     _.forEach(el, item => {
         let v = '';
-        console.log('xpa[1]', xpa[1]);
         if (xpa[1].indexOf('||') > 0) {
             const attrs = xpa[1].split('||');
-            console.log('attrs', attrs);
             v = $(item).attr(attrs[0]) || $(item).attr(attrs[0]);
         } else if(xpa[1] == 'Text') {
             v = $(item).text().trim();
@@ -360,7 +354,8 @@ function getCssValArray($, item, parse) {
 
 
 async function homeVod() {
-    if (rule.推荐) {
+    const vodParse = rule.homeVod || rule.推荐;
+    if (vodParse) {
         let url = HOST;
         if(rule.homeUrl && rule.homeUrl.startsWith('/')) {
             url = HOST + rule.homeUrl;
@@ -368,7 +363,7 @@ async function homeVod() {
             url = rule.homeUrl;
         }
         const $ = load(await request(url));
-        let videos = getVideoByCssParse($, rule.推荐);
+        let videos = getVideoByCssParse($, vodParse);
         return JSON.stringify({
             list: videos,
         });
@@ -394,7 +389,7 @@ function getVideoByCssParse($, cssParse) {
 
 async function category(tid, pg, filter, extend) {
     if (pg <= 0) pg = 1;
-    let page = '';
+    let page = pg;
     if (pg > 1) {
         page = pg;
     }
@@ -411,13 +406,11 @@ async function category(tid, pg, filter, extend) {
                 url = url.replace(match, extend[param] || '');
             });
         }
-        //console.log('cate url', url);
         const res = await request(url);
-        //console.log('cate res', res);
-        if (rule.一级) {
+        const vodParse = rule.一级 || rule.categoryVod;
+        if (vodParse) {
             const $ = load(res);
-            let videos = getVideoByCssParse($, rule.一级);
-            const split = rule.一级.split(';');
+            let videos = getVideoByCssParse($, vodParse);
             return JSON.stringify({
                 list: videos,
                 page: page,
@@ -435,8 +428,8 @@ async function detail(id) {
     const $ = load(await request(url));
     const vod = {
     }
-    if (rule.二级) {
-        const parse = rule.二级;
+    const parse = rule.二级 || rule.detailVod;
+    if (parse) {
         if ('object' === typeof(parse)) {
             if (parse['director']) {
                 vod.vod_director = getCssValArray($,'',parse['director']).join(' ');
@@ -462,11 +455,9 @@ async function detail(id) {
             if (parse['playFrom'] && parse['playUrl']) {
                 const playMap = {};
                 const tabNames = getCssValArray($, '', parse['playFrom']);
-                console.log('playFrom', tabNames);
                 const split = parse['playUrl'].split(';');
                 const tabs = $(split[0]);
                 _.each(tabs, (tab,i) => {
-                    //console.log('tab_exclude', parse['tab_exclude'].indexOf(tabNames[i]));
                     if(rule['tab_exclude'] && rule['tab_exclude'].indexOf(tabNames[i]) > -1) {
                         return;
                     }
@@ -506,8 +497,7 @@ async function play(flag, id, flags) {
     }
     let playUrl = url;
     const html = await request(url);
-    let $ = load(html);
-    let json = $('script:contains(player_aaaa)').text().replace('var player_aaaa=','');
+    const json = getPlay4aJson;
     if (json) {
         let js = JSON.parse(json);
         playUrl = js.url;
@@ -543,7 +533,10 @@ async function play(flag, id, flags) {
     }); 
 }
 
-
+function getPlay4aJson(html) {
+    let $ = load(html);
+    return $('script:contains(player_aaaa)').text().replace('var player_aaaa=','');
+}
 
 function base64Decode(text) {
     return Crypto.enc.Utf8.stringify(Crypto.enc.Base64.parse(text));
