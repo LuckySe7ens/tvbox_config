@@ -20,6 +20,13 @@
        "type": 3,
        "api": "tiantian_open.js"
    },
+{
+       "key": "jpyy",
+       "name": "金牌影视",
+       "type": 3,
+       "api": "lsq_open.js",
+	"ext": "https://8943.kstore.space/jpyy.rule"
+   },
    {
         "key": "saohuo",
         "name": "骚火影视",
