@@ -377,21 +377,21 @@ async function play(flag, id, flags) {
     if (rule.lazy) {
         try {
             await evalCustomerJs(rule.lazy);
-            return {
+            return JSON.stringify({
                 parse: 0,
                 url: playUrl,
                 header: headers
-            }; 
+            });
         } catch(error) {
             console.log(error);
         }
     }
     if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?'))) {
-        return {
-            parse: 0,
-            url: playUrl,
-            header: headers
-        }; 
+        return JSON.stringify({
+                parse: 0,
+                url: playUrl,
+                header: headers
+            });
     }
     try {
         html = await request(url);
