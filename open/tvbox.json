@@ -26,6 +26,13 @@
        "type": 3,
        "api": "./tiantian_open.js"
    },
+    {
+       "key": "jpyy",
+       "name": "金牌影视",
+       "type": 3,
+       "api": "./leospring_open.js",
+       "ext": 'https://8943.kstore.space/jpyy.rule'
+   },
    {
         "key": "nkvod",
         "name": "耐看影视",
