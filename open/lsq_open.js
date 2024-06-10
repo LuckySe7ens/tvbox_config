@@ -10,6 +10,7 @@ const UC_UA = 'Mozilla/5.0 (Linux; U; Android 9; zh-CN; MI 9 Build/PKQ1.181121.0
 const IOS_UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1';
 const RULE_CK = 'cookie'; // 源cookie的key值
 let html = '';
+
 var charStr = 'abacdefghjklmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789';
 let HOST = '';
 let validUrl = HOST + '/index.php/verify/index.html?';
@@ -23,7 +24,11 @@ let parseUrl = [];
 var rule = {};
 let ext;
 let videos = [];
+let filterObj = {};
+let pagecount = 999;
+let page = 1;
 let playUrl = '';
+let searchUrl = '';
 let input = '';
 let timeout = 10000;
 let headers = {
@@ -32,9 +37,10 @@ let headers = {
 };
 
 async function request(reqUrl, data, header, method) {
+    //console.log('request', reqUrl);
     let res = await req(reqUrl, {
         method: method || 'get',
-        data: data || {},
+        data: data || '',
         headers: header || {
             'User-Agent': PC_UA,
             'Referer': HOST,
@@ -43,6 +49,7 @@ async function request(reqUrl, data, header, method) {
         postType: method === 'post' ? 'form-data' : '',
         timeout: timeout,
     });
+    //console.log('res', res.data);
     return res.content;
 }
 
@@ -105,7 +112,6 @@ async function parseHost() {
 
 async function home(filter) {
     let classes = [];
-    let filterObj = {};
     if (rule.class_name) {
         let class_name = rule.class_name.split('&');
         for (let i = 0; i < class_name.length; i++) {
@@ -118,11 +124,8 @@ async function home(filter) {
             if (homeUrl.startsWith('/')) {
                 homeUrl = HOST + homeUrl;
             }
-            html = await request(homeUrl);
-            
+            html = await request(homeUrl);       
         }
-        //console.log('homeUrl', homeUrl);
-        //console.log('html', html);
         const $ = load(html);
         const split = rule.class_parse.split(';');
         _.forEach($(split[0]), item => {
@@ -137,7 +140,6 @@ async function home(filter) {
     if (rule.homeJS) {
         eval(rule.homeJS);
     }
-
     //let classes = [{'type_id':1,'type_name':'电影'},{'type_id':2,'type_name':'电视剧'},{'type_id':3,'type_name':'综艺'},{'type_id':4,'type_name':'动漫'},{'type_id':63,'type_name':'纪录片'}];
     //let filterObj = 
 
@@ -226,7 +228,9 @@ function getCssValArray($, item, parse) {
 
 
 async function homeVod() {
+    videos = [];
     const vodParse = rule.homeVod || rule.推荐;
+    const vodParseJS = rule.homeVodJS || rule.推荐JS;
     if (vodParse) {
         let url = HOST;
         if(rule.homeUrl && rule.homeUrl.startsWith('/')) {
@@ -235,7 +239,12 @@ async function homeVod() {
             url = rule.homeUrl;
         }
         const $ = load(await request(url));
-        let videos = getVideoByCssParse($, vodParse);
+        videos = getVideoByCssParse($, vodParse);
+        return JSON.stringify({
+            list: videos,
+        });
+    } else if(vodParseJS) {
+        await evalCustomerJs(vodParseJS);
         return JSON.stringify({
             list: videos,
         });
@@ -260,11 +269,9 @@ function getVideoByCssParse($, cssParse) {
 }
 
 async function category(tid, pg, filter, extend) {
+    videos = [];
     if (pg <= 0) pg = 1;
-    let page = pg;
-    if (pg > 1) {
-        page = pg;
-    }
+    page = pg;
     if(rule.url) {
         let url = rule.url.replaceAll('fypage', page).replaceAll('fyclass', tid);
         if (!url.startsWith('http')) {
@@ -280,15 +287,26 @@ async function category(tid, pg, filter, extend) {
         }
 
         //console.log('cate url', url);
-        const res = await request(url);
+        html = await request(url);
         //console.log('cate res', res);
         const vodParse = rule.一级 || rule.categoryVod;
+        const vodParseJS = rule.一级JS || rule.categoryVodJS;
         if (vodParse) {
-            const $ = load(res);
-            let videos = getVideoByCssParse($, vodParse);
+            const $ = load(html);
+            videos = getVideoByCssParse($, vodParse);
             return JSON.stringify({
                 list: videos,
+                filters: filterObj,
                 page: page,
+                pagecount: pagecount,
+            });
+        } else {
+            await evalCustomerJs(vodParseJS);
+            return JSON.stringify({
+                list: videos,
+                filters: filterObj,
+                page: page,
+                pagecount: pagecount,
             });
         }
     }
@@ -388,10 +406,10 @@ async function play(flag, id, flags) {
     }
     if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?'))) {
         return JSON.stringify({
-                parse: 0,
-                url: playUrl,
-                header: headers
-            });
+            parse: 0,
+            url: playUrl,
+            header: headers
+        });
     }
     try {
         html = await request(url);
@@ -441,24 +459,21 @@ function sha1(text) {
 
 async function search(wd, quick, pg) {
     try{
+        input = wd;
         if (!pg) pg = '';
         let url = '/search.php?searchword=' + wd;
         if(rule.searchUrl) url = rule.searchUrl;
-        url = url.replace('**', wd).replace('fypage', pg);
+        url = url.replace('**', wd).replace('fypage', page); 
         if(!url.startsWith('http')) url = HOST + url;
-        let html = await request(url);
-        let videos = [];
-        if(rule.searchParse) {
+        searchUrl = url;
+        if(rule.searchVodJS) {
             //执行自定义js
-          if(rule.searchParse.startsWith('js:')){
-            eval(rule.searchParse);
-          } else {
+            await evalCustomerJs(rule.searchVodJS);
+        } else if (rule.searchVod) {
+            let html = await request(url);
             //按css选择器组装数据
             const $ = load(html);
-            videos = getVideoByCssParse($, rule.searchParse)
-          }
-        } else {
-            //默认搜索获取获取数据
+            videos = getVideoByCssParse($, rule.searchVod)
         }
         return JSON.stringify({
             list: videos,
@@ -489,9 +504,9 @@ async function search(wd, quick, pg) {
         //             vod_remarks: '',
         //         };
         //     });
-            return JSON.stringify({
-                list: videos,
-            });
+            // return JSON.stringify({
+            //     list: videos,
+            // });
         // }
         currentRetryTime = 0;
     } catch(error) {
@@ -548,7 +563,7 @@ function sleep(ms) {
 }
 
 async function evalCustomerJs(jsCode) {
-    const split = jsCode.split('||');
+    const split = jsCode.split('|||');
     for(let i = 0; i < split.length; i++) {
         if(split[i].indexOf('request(') >= 0) {
             html = await eval(split[i]);
