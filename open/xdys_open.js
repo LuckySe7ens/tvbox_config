@@ -174,7 +174,7 @@ async function play(flag, id, flags) {
             }
         } else {
             const reqUrl = parseUrl + playUrl;
-            const res = await req('https://api.xdys.vip/lx/post.php', {
+            const res = await req('https://api.xdys.vip/post.php', {
                 data: playUrl, 
                 method: 'post', 
                 headers: {
