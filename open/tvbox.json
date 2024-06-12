@@ -88,6 +88,13 @@
        "api": "./netflixgc_open.js"
    },
    {
+       "key": "bulei",
+       "name": "bulei",
+       "type": 3,
+       "api": "csp_Wexhuaruitv",
+      "jar": "https://8943.kstore.space/wex_mod.jar"
+   },
+    {
         "key": "黑木耳",
         "name": "黑木耳",
         "type": 3,
