@@ -314,6 +314,7 @@ async function category(tid, pg, filter, extend) {
 
 async function detail(id) {
     let url = id;
+    input = id;
     if (rule.detailUrl) url = rule.detailUrl;
     if(url.startsWith('/')) url = HOST + url;
     url = url.replace('fyid', id); 
@@ -322,6 +323,7 @@ async function detail(id) {
     const vod = {
     }
     const parse = rule.二级 || rule.detailVod;
+    const jsCode = rule.二级JS || rule.detailVodJS;
     if (parse) {
         if ('object' === typeof(parse)) {
             if (parse['director']) {
@@ -373,9 +375,14 @@ async function detail(id) {
                 vod.vod_play_url = vod_play_url.join('$$$');
             }
         }
+        return JSON.stringify({
+            list: [vod],
+        });
+    } else if(jsCode) {
+        await evalCustomerJs(jsCode);
     }
     return JSON.stringify({
-        list: [vod],
+        list: videos,
     });
 }
 
