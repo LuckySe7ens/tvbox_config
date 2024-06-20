@@ -313,18 +313,20 @@ async function category(tid, pg, filter, extend) {
 }
 
 async function detail(id) {
-    let url = id;
+    videos = [];
     input = id;
+    let url = id;
     if (rule.detailUrl) url = rule.detailUrl;
     if(url.startsWith('/')) url = HOST + url;
     url = url.replace('fyid', id); 
-
-    const $ = load(await request(url));
+    
     const vod = {
     }
     const parse = rule.二级 || rule.detailVod;
     const jsCode = rule.二级JS || rule.detailVodJS;
     if (parse) {
+        html = await request(url);
+        const $ = load(html);
         if ('object' === typeof(parse)) {
             if (parse['director']) {
                 vod.vod_director = getCssValArray($,'',parse['director']).join(' ');
@@ -466,6 +468,7 @@ function sha1(text) {
 
 async function search(wd, quick, pg) {
     try{
+        videos = [];
         input = wd;
         if (!pg) pg = '';
         let url = '/search.php?searchword=' + wd;
