@@ -21,10 +21,11 @@
        "api": "./nangua_open.js"
    },
     {
-       "key": "tiantian",
-       "name": "天天影视",
+       "key": "lurenjia",
+       "name": "路人甲|4K",
        "type": 3,
-       "api": "./tiantian_open.js"
+       "api": "./lsq_open.js",
+      "ext": "https://8943.kstore.space/lurenjia.js"
    },
     {
        "key": "jpyy",
