@@ -69,11 +69,11 @@ async function category(tid, pg, filter, extend) {
             params.push(extend['form']);
             sql += ' and form_id = ?';
         }
-        sql += ` order by id limit ${pg-1},20;`;
+        sql += ` order by id limit ${(pg-1)*20},20;`;
         //url = url + `?table=singer&pg=${pg}`;
         //if(extend['region']) url = url + '&where=region_id&keywords=' + extend['region'];
         //if(extend['form']) url += '&where=form_id&keywords=' + extend['form'];
-        console.log(sql, params);
+        //console.log(sql, params);
         let res = JSON.parse(await request(url, {params: params, sql: sql}));
         videos = _.map(res.result[0].results, item => {
             return {
@@ -93,7 +93,7 @@ async function category(tid, pg, filter, extend) {
             params.push(extend['type']);
             sql += ' and type_id = ?';
         }
-        sql += ` order by number limit ${pg-1},20;`;
+        sql += ` order by number limit ${(pg-1)*20},20;`;
         //url = url + `?table=song&pg=${pg}`;
         //if(extend['lan']) url = url + '&where=language_id&keywords=' + extend['lan'];
         //if(extend['type']) url += '&where=type_id&keywords=' + extend['type'];
