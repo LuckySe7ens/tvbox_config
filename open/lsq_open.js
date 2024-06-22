@@ -1,8 +1,4 @@
 import { Crypto, load, _ } from './lib/cat.js';
-
-/**
- * 发布页：https://kan80.app/
- */
 const MOBILE_UA = 'Mozilla/5.0 (Linux; Android 11; M2007J3SC Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045714 Mobile Safari/537.36';
 const PC_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36';
 const UA = 'Mozilla/5.0';
@@ -22,11 +18,15 @@ let maxRetryTime = 5;
 let currentRetryTime = 0;
 let parseUrl = [];
 var rule = {};
-let ext;
+let ext = {};
+let classes = [];
 let videos = [];
 let filterObj = {};
 let pagecount = 999;
 let page = 1;
+let classId = '';
+let flagParse = {};
+let playFlag;
 let playUrl = '';
 let searchUrl = '';
 let input = '';
@@ -37,7 +37,6 @@ let headers = {
 };
 
 async function request(reqUrl, data, header, method) {
-    //console.log('request', reqUrl);
     let res = await req(reqUrl, {
         method: method || 'get',
         data: data || '',
@@ -49,7 +48,6 @@ async function request(reqUrl, data, header, method) {
         postType: method === 'post' ? 'form-data' : '',
         timeout: timeout,
     });
-    //console.log('res', res.data);
     return res.content;
 }
 
@@ -111,7 +109,7 @@ async function parseHost() {
 }
 
 async function home(filter) {
-    let classes = [];
+    classes = [];
     if (rule.class_name) {
         let class_name = rule.class_name.split('&');
         for (let i = 0; i < class_name.length; i++) {
@@ -138,7 +136,7 @@ async function home(filter) {
         filterObj = rule.filter;
     }
     if (rule.homeJS) {
-        eval(rule.homeJS);
+        await evalCustomerJs(rule.homeJS);
     }
     //let classes = [{'type_id':1,'type_name':'电影'},{'type_id':2,'type_name':'电视剧'},{'type_id':3,'type_name':'综艺'},{'type_id':4,'type_name':'动漫'},{'type_id':63,'type_name':'纪录片'}];
     //let filterObj = 
@@ -271,6 +269,8 @@ function getVideoByCssParse($, cssParse) {
 async function category(tid, pg, filter, extend) {
     videos = [];
     if (pg <= 0) pg = 1;
+    classId = tid;
+    ext = extend;
     page = pg;
     if(rule.url) {
         let url = rule.url.replaceAll('fypage', page).replaceAll('fyclass', tid);
@@ -290,7 +290,6 @@ async function category(tid, pg, filter, extend) {
         html = await request(url);
         //console.log('cate res', res);
         const vodParse = rule.一级 || rule.categoryVod;
-        const vodParseJS = rule.一级JS || rule.categoryVodJS;
         if (vodParse) {
             const $ = load(html);
             videos = getVideoByCssParse($, vodParse);
@@ -300,16 +299,19 @@ async function category(tid, pg, filter, extend) {
                 page: page,
                 pagecount: pagecount,
             });
-        } else {
-            await evalCustomerJs(vodParseJS);
-            return JSON.stringify({
-                list: videos,
-                filters: filterObj,
-                page: page,
-                pagecount: pagecount,
-            });
         }
     }
+    const vodParseJS = rule.一级JS || rule.categoryVodJS;
+    if(vodParseJS) {
+        await evalCustomerJs(vodParseJS);
+        return JSON.stringify({
+            list: videos,
+            filters: filterObj,
+            page: page,
+            pagecount: pagecount,
+        });
+    }
+    return '{}';
 }
 
 async function detail(id) {
@@ -390,6 +392,7 @@ async function detail(id) {
 
 async function play(flag, id, flags) {
     let url  = id;
+    playFlag = flag;
     input = id;
     if (url.startsWith('magnet:')) {
         return JSON.stringify({
@@ -520,6 +523,7 @@ async function search(wd, quick, pg) {
         // }
         currentRetryTime = 0;
     } catch(error) {
+        console.log(error);
         currentRetryTime = 0;
         return '{}';
     }
