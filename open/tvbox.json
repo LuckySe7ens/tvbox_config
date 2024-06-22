@@ -32,8 +32,15 @@
       "ext": "http://cf.yuzhoukeji.top/api.php/app/"
     },
     {
+       "key": "bulei",
+       "name": "4K 布蕾",
+       "type": 3,
+       "api": "csp_Wexhuaruitv",
+      "jar": "https://8943.kstore.space/wex_mod.jar"
+   },
+    {
        "key": "lurenjia",
-       "name": "路人甲|4K",
+       "name": "4K 路人甲",
        "type": 3,
        "api": "./lsq_open.js",
       "ext": "https://8943.kstore.space/lurenjia.js"
@@ -51,6 +58,35 @@
         "type": 3,
         "api": "./nkvod_open.js"
    },
+    {
+            "key": "影视实验",
+            "name": "影视实验",
+            "type": 1,
+            "api": "http://zhangqun66.serv00.net/159.php",
+            "searchable": 1,
+            "changeable": 1,
+            "categories": [
+                "动作片",
+                "喜剧片",
+                "爱情片",
+                "科幻片",
+                "恐怖片",
+                "剧情片",
+                "战争片",
+                "国产剧",
+                "香港剧",
+                "韩国剧",
+                "欧美剧",
+                "国产动漫",
+                "欧美动漫",
+                "日韩动漫",
+                "体育",
+                "NBA",
+                "爽文短剧",
+                "年代穿越",
+                "成长逆袭"
+            ]
+        },
    {
         "key": "xdys",
         "name": "兄弟影视",
@@ -98,13 +134,6 @@
        "name": "奈飞工厂",
        "type": 3,
        "api": "./netflixgc_open.js"
-   },
-   {
-       "key": "bulei",
-       "name": "bulei",
-       "type": 3,
-       "api": "csp_Wexhuaruitv",
-      "jar": "https://8943.kstore.space/wex_mod.jar"
    },
     {
         "key": "黑木耳",
