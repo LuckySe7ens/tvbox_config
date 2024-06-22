@@ -52,6 +52,13 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/jpyy.rule"
    },
+    {
+        "key": "gaoqing_360",
+        "name": "高清360",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": "https://dj.li0580.com/api.php/provide/vod/"
+         },
    {
         "key": "nkvod",
         "name": "耐看影视",
