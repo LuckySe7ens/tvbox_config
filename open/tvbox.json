@@ -49,12 +49,8 @@
       "key": "4K yuluo",
       "name": "4K 雨落",
       "type": 3,
-      "playerType": 1,
-      "api": "csp_AppYsV2",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": "http://dsakf23665.com/api.php/v1.player/"
+      "api": "./lsq_open.js",
+      "ext": "https://8943.kstore.space/yuluo.js"
     },
     {
        "key": "jpyy",
