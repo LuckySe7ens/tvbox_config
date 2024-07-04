@@ -1,5 +1,6 @@
 {
-  "spider": "https://8943.kstore.space/custom_spider.jar",
+  //"spider": "https://8943.kstore.space/custom_spider.jar",
+  "spider": "https://8943.kstore.space/lsq.jar",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -188,6 +189,15 @@
        "type": 3,
        "api": "./ktv_open.js"
    },
+    {
+      "key": "iktv",
+      "name": "iktv",
+      "type": 3,
+      "api": "csp_Iktv",
+      "searchable": 1,
+      "quickSearch": 1,
+      "changeable": 0
+    },
    {
        "key": "yinyuetai",
        "name": "音悦台",
