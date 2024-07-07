@@ -460,6 +460,16 @@ function getPlay4aJson(html) {
 function base64Decode(text) {
     return Crypto.enc.Utf8.stringify(Crypto.enc.Base64.parse(text));
 }
+ //aes解密
+ function aesDecode(str, keyStr, ivStr) {
+    const key = Crypto.enc.Utf8.parse(keyStr);
+    var bytes = Crypto.AES.decrypt(str, key, {
+        iv: Crypto.enc.Utf8.parse(ivStr),
+        mode: Crypto.mode.CBC,
+        padding: Crypto.pad.Pkcs7
+    });
+    return bytes.toString(Crypto.enc.Utf8);
+ }
 
 function md5(text) {
     return Crypto.MD5(text).toString();
