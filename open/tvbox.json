@@ -199,6 +199,13 @@
       "changeable": 1
     },
     {
+       "key": "gzys",
+       "name": "瓜子影视",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/gzys.js"
+   },
+    {
        "key": "ddjz",
        "name": "多多追剧",
        "type": 3,
