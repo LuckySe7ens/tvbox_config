@@ -1,4 +1,8 @@
 import { Crypto, load, _ } from './lib/cat.js';
+
+/**
+ * 发布页：https://kan80.app/
+ */
 const MOBILE_UA = 'Mozilla/5.0 (Linux; Android 11; M2007J3SC Build/RKQ1.200826.002; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/77.0.3865.120 MQQBrowser/6.2 TBS/045714 Mobile Safari/537.36';
 const PC_UA = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36';
 const UA = 'Mozilla/5.0';
@@ -21,6 +25,7 @@ var rule = {};
 let ext = {};
 let classes = [];
 let videos = [];
+let videoDetail = {};
 let filterObj = {};
 let pagecount = 999;
 let page = 1;
@@ -255,10 +260,12 @@ function getVideoByCssParse($, cssParse) {
     _.forEach($(split[0]), item => {
         let vod_id = getCssVal($, item, split[2]);
         if(vod_id) {
+            let pic = getCssVal($, item, split[3]);
+            if(pic.startsWith('/')) pic = HOST + pic;
             videos.push({
                 vod_id: vod_id,
                 vod_name: getCssVal($, item, split[1]),
-                vod_pic: getCssVal($, item, split[3]),
+                vod_pic: pic,
                 vod_remarks: getCssVal($, item, split[4]),
             })
         }
@@ -383,6 +390,7 @@ async function detail(id) {
             list: [vod],
         });
     } else if(jsCode) {
+        videoDetail = {};
         await evalCustomerJs(jsCode);
     }
     return JSON.stringify({
@@ -460,17 +468,37 @@ function getPlay4aJson(html) {
 function base64Decode(text) {
     return Crypto.enc.Utf8.stringify(Crypto.enc.Base64.parse(text));
 }
- //aes解密
- function aesDecode(str, keyStr, ivStr) {
+ //aes加密
+ function aesEncode(str, keyStr, ivStr, type) {
     const key = Crypto.enc.Utf8.parse(keyStr);
-    var bytes = Crypto.AES.decrypt(str, key, {
+    let encData = Crypto.AES.encrypt(str, key, {
         iv: Crypto.enc.Utf8.parse(ivStr),
         mode: Crypto.mode.CBC,
         padding: Crypto.pad.Pkcs7
     });
-    return bytes.toString(Crypto.enc.Utf8);
+    if (type === 'hex') return encData.ciphertext.toString(Crypto.enc.Hex);
+    return encData.toString(Crypto.enc.Utf8);
  }
-
+//aes解密
+ function aesDecode(str, keyStr, ivStr, type) {
+    const key = Crypto.enc.Utf8.parse(keyStr);
+    if (type === 'hex') {
+        str = Crypto.enc.Hex.parse(str);
+        return Crypto.AES.decrypt({
+            ciphertext: str
+        }, key, {
+            iv: Crypto.enc.Utf8.parse(ivStr),
+            mode: Crypto.mode.CBC,
+            padding: Crypto.pad.Pkcs7
+        }).toString(Crypto.enc.Utf8);
+    } else {
+        return Crypto.AES.decrypt(str, key, {
+            iv: Crypto.enc.Utf8.parse(ivStr),
+            mode: Crypto.mode.CBC,
+            padding: Crypto.pad.Pkcs7
+        }).toString(Crypto.enc.Utf8);
+    }
+ }
 function md5(text) {
     return Crypto.MD5(text).toString();
 }
