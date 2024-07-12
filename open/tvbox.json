@@ -205,6 +205,13 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/ddzj.js"
    },
+    {
+       "key": "keke",
+       "name": "可可影视",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/keke.js"
+   },
    {
        "key": "yinyuetai",
        "name": "音悦台",
