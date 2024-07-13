@@ -77,7 +77,18 @@
         "type": 3,
         "api": "./caiji.js",
         "ext": "http://liu.li0580.com:5365/api.php/provide/vod/"
-         },
+   },
+    {
+      "key": "朱总麒麟",
+      "name": "🐧无广HDR-4K【会员线】",
+      "playerType": 1,
+      "type": 3,
+      "api": "csp_AppYsV2",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "ext": " http://122.228.84.103:5825/api.php/app/"
+    },
    {
         "key": "nkvod",
         "name": "耐看影视",
