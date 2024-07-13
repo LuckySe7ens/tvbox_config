@@ -39,17 +39,14 @@ let timeout = 10000;
 let headers = {
     'User-Agent': PC_UA,
     'Referer': HOST,
+    'Cookie': COOKIE
 };
 
 async function request(reqUrl, data, header, method) {
     let res = await req(reqUrl, {
         method: method || 'get',
         data: data || '',
-        headers: header || {
-            'User-Agent': PC_UA,
-            'Referer': HOST,
-            'Cookie': COOKIE
-        },
+        headers: header || headers,
         postType: method === 'post' ? 'form-data' : '',
         timeout: timeout,
     });
