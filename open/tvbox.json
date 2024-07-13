@@ -76,7 +76,7 @@
         "name": "高清360",
         "type": 3,
         "api": "./caiji.js",
-        "ext": "http://liu.li0580.com:26/api.php/provide/vod/"
+        "ext": "http://liu.li0580.com:5365/api.php/provide/vod/"
          },
    {
         "key": "nkvod",
