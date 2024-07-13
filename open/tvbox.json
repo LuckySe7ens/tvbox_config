@@ -21,17 +21,45 @@
       "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
       "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/jp.js"
     },
-   {
+   /** {
         "key": "saohuo",
         "name": "骚火影视",
         "type": 3,
         "api": "./saohuo_open.js"
-   },
+   }, **/
     {
         "key": "nm",
         "name": "农民影视",
         "type": 3,
         "api": "./nongmin_open.js"
+   },
+    {
+       "key": "gzys",
+       "name": "瓜子影视",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/gzys.js"
+   },
+    {
+       "key": "ddjz",
+       "name": "多多追剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/ddzj.js"
+   },
+    {
+       "key": "keke",
+       "name": "可可影视",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/keke.js"
+   },
+    {
+       "key": "noys",
+       "name": "NO视频",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/noys.js"
    },
     {
        "key": "ng",
@@ -40,23 +68,49 @@
        "api": "./nangua_open.js"
    },
     {
-      "key": "4K HDR",
-      "name": "4K HDR",
-      "type": 3,
+        "key": "gaoqing360",
+        "name": "高清360",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": "http://liu.li0580.com:5365/api.php/provide/vod/"
+   },{
+          "key": "subaibai",
+          "name": "素白【📺】",
+          "type": 3,
+          "api": "./subaibai_open.js"
+    },
+   {
+        "key": "zxzj",
+        "name": "在家【📺】",
+        "type": 3,
+        "api": "./zxzj_open.js"
+   }, 
+    {
+      "key": "朱总麒麟",
+      "name": "🐧无广HDR-4K",
       "playerType": 1,
+      "type": 3,
       "api": "csp_AppYsV2",
+      "playurl": "https://ldhz.li0580.com//api/jsonindex.php/?key=lOYmMQvSbYBUWZjMDC&url=",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": "http://cf.yuzhoukeji.top/api.php/app/"
+      "ext": " http://122.228.84.103:5825/api.php/app/"
     },
     {
+       "key": "4kav",
+       "name": "4K-诶喂",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/4kav.js"
+   },
+ /**   {
        "key": "bulei",
        "name": "4K 布蕾",
        "type": 3,
        "api": "csp_Wexhuaruitv",
       "jar": "https://8943.kstore.space/wex_mod.jar"
-   },
+   }, **/
     {
        "key": "lurenjia",
        "name": "4K 路人甲",
@@ -70,25 +124,6 @@
       "type": 3,
       "api": "./lsq_open.js",
       "ext": "https://8943.kstore.space/yuluo.js"
-    },
-    {
-        "key": "gaoqing360",
-        "name": "高清360",
-        "type": 3,
-        "api": "./caiji.js",
-        "ext": "http://liu.li0580.com:5365/api.php/provide/vod/"
-   },
-    {
-      "key": "朱总麒麟",
-      "name": "🐧无广HDR-4K【会员线】",
-      "playerType": 1,
-      "type": 3,
-      "api": "csp_AppYsV2",
-      "playurl": "https://ldhz.li0580.com//api/jsonindex.php/?key=lOYmMQvSbYBUWZjMDC&url=",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": " http://122.228.84.103:5825/api.php/app/"
     },
    {
         "key": "nkvod",
@@ -153,7 +188,7 @@
     },
     {
         "key": "4kvm",
-        "name": "4k影视",
+        "name": "4k-vm",
         "type": 3,
         "api": "./4kvm_open.js"
    },
@@ -210,41 +245,6 @@
       "quickSearch": 1,
       "changeable": 1
     },
-    {
-       "key": "gzys",
-       "name": "瓜子影视",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/gzys.js"
-   },
-    {
-       "key": "4kav",
-       "name": "4K-诶喂",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/4kav.js"
-   },
-    {
-       "key": "ddjz",
-       "name": "多多追剧",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/ddzj.js"
-   },
-    {
-       "key": "keke",
-       "name": "可可影视",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/keke.js"
-   },
-    {
-       "key": "noys",
-       "name": "NO视频",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/noys.js"
-   },
    {
        "key": "yinyuetai",
        "name": "音悦台",
@@ -277,19 +277,7 @@
         "type": 3,
         "api": "./caiji.js",
         "ext": "https://49zyw.com/api.php/provide/vod/from/49zyw"
-         },       
-   {
-          "key": "subaibai",
-          "name": "素白【📺】",
-          "type": 3,
-          "api": "./subaibai_open.js"
-    },
-   {
-        "key": "zxzj",
-        "name": "在家【📺】",
-        "type": 3,
-        "api": "./zxzj_open.js"
-   }, 
+    },       
     {
       "key": "新6V",
       "name": "🧲新6V┃磁力",
