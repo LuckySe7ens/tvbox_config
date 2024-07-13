@@ -206,6 +206,13 @@
        "ext": "https://8943.kstore.space/gzys.js"
    },
     {
+       "key": "4kav",
+       "name": "4K-诶喂",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/4kav.js"
+   },
+    {
        "key": "ddjz",
        "name": "多多追剧",
        "type": 3,
