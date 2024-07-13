@@ -72,7 +72,7 @@
       "ext": "https://8943.kstore.space/yuluo.js"
     },
     {
-        "key": "gaoqing_360",
+        "key": "gaoqing360",
         "name": "高清360",
         "type": 3,
         "api": "./caiji.js",
