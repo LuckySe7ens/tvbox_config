@@ -1,6 +1,6 @@
 {
   //"spider": "https://8943.kstore.space/custom_spider.jar",
-  "spider": "https://8943.kstore.space/lsq.jar",
+  "spider": "https://8943.kstore.space/lsq1.jar",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -129,7 +129,14 @@
       "key": "taozi",
       "name": "4K 🍑",
       "type": 3,
-      "api": "./taozi_open.js"
+      "api": "csp_Taozi"
+    },
+    {
+      "key": "reflect",
+      "name": "reflect",
+      "type": 3,
+      "api": "csp_Reflect",
+      "ext": "com.github.catvod.spider.Iktv"
     },
    {
         "key": "nkvod",
