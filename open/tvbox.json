@@ -72,7 +72,7 @@
         "name": "高清360",
         "type": 3,
         "api": "./caiji.js",
-        "ext": "http://liu.li0580.com:5365/api.php/provide/vod/"
+        "ext": "http://liu.li0580.com:5565/api.php/provide/vod/"
    },{
           "key": "subaibai",
           "name": "素白【📺】",
@@ -641,11 +641,11 @@
     {
       "name": "leospring",
       "type": 1,
-      "url": "http://110.40.61.123:7777/api/?key=5r77owG0IxkmKBXli9&url="
+      "url": "https://ldhz.li0580.com/api/jsonindex.php/?key=XoDTtyOvAv6BFMkFGV&url="
     },{
       "name": "蹲街捏蚂蚁",
       "type": 1,
-      "url": "https://ldhz.li0580.com//api/jsonindex.php/?key=lOYmMQvSbYBUWZjMDC&url="
+      "url": "http://110.42.7.182:881/api/?key=c4c3p0YQDnvmdaoVnT&url="
     }],
   "lives": [
     {
