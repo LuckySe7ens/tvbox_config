@@ -10,6 +10,7 @@ let siteKey = '';
 let siteType = 0;
 
 const UA = 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1';
+
 async function request(reqUrl) {
     let res = await req(reqUrl, {
         method: 'get',
@@ -173,8 +174,20 @@ async function play(flag, id, flags) {
             }
         } else {
             const reqUrl = parseUrl + playUrl;
-            const res = await req('https://jx.xdys.vip/JSON', {
-                body: playUrl, 
+            let html = await request(reqUrl);
+            //console.log(html);
+            //"dmkey": "a97b811c47cb503f5ab45aa6c8a9628d",
+            let dmkey = html.split('dmkey":"')[1].split('",')[0];
+            //console.log('json', dmkey);
+
+            let key = sha256(parseInt(new Date().getTime()/1000/3600)*3600 + 'brovod');
+            const res = await req('https://jx.xdys.vip/v1/jx', {
+                data: {
+                    dmkey: dmkey,
+                    url: playUrl,
+                    pbgjz: 'A',
+                    key: key
+                }, 
                 method: 'post', 
                 headers: {
                     'Content-Type': 'text/plain'
@@ -182,7 +195,7 @@ async function play(flag, id, flags) {
             });
             //console.log('res', res);
             if (res) {
-                playUrl = JSON.parse(res.content).url;
+                playUrl = JSON.parse(res.content).jarod;
             }
             // const parseHtml = await request(reqUrl);
             // const matches = parseHtml.match(/let ConFig = {([\w\W]*)},box/);
@@ -215,6 +228,10 @@ function decryptUrl(jsConfig) {
     });
     const decryptedUrl = Crypto.enc.Utf8.stringify(decrypted);
     return decryptedUrl;
+}
+
+function sha256(str) {
+    return Crypto.SHA256(str).toString(Crypto.enc.Hex);
 }
 
 async function search(wd, quick) {
