@@ -72,7 +72,7 @@
         "name": "高清360",
         "type": 3,
         "api": "./caiji.js",
-        "ext": "http://liu.li0580.com:7787/api.php/provide/vod/"
+        "ext": "http://liu.li0580.com:7785/api.php/provide/vod/"
    },{
           "key": "subaibai",
           "name": "素白【📺】",
@@ -95,7 +95,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
-      "ext": " http://122.228.84.103:5825/api.php/app/"
+      "ext": " http://tx.jingyang.design:1102/api.php/app/"
     },
     {
        "key": "4kav",
