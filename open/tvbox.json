@@ -187,6 +187,13 @@
        "api": "./littleApple_open.js"
    },
     {
+      "key": "javsb",
+      "name": "javsb",
+      "type": 3,
+      "api": "./lsq_open.js",
+      "ext": "https://8943.kstore.space/javsb.js"
+    },
+    {
        "key": "netflixgc",
        "name": "奈飞工厂",
        "type": 3,
