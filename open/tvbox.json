@@ -21,12 +21,12 @@
       "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
       "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/jp.js"
     },
-   /** {
+   {
         "key": "saohuo",
         "name": "骚火影视",
         "type": 3,
         "api": "./saohuo_open.js"
-   }, **/
+   },
     {
         "key": "nm",
         "name": "农民影视",
@@ -186,13 +186,13 @@
        "type": 3,
        "api": "./littleApple_open.js"
    },
-    {
+   /** {
       "key": "javsb",
       "name": "javsb",
       "type": 3,
       "api": "./lsq_open.js",
       "ext": "https://8943.kstore.space/javsb.js"
-    },
+    }, */
     {
        "key": "netflixgc",
        "name": "奈飞工厂",
