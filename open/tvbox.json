@@ -67,13 +67,14 @@
        "type": 3,
        "api": "./nangua_open.js"
    },
-    {
+    /** {
         "key": "gaoqing360",
         "name": "高清360",
         "type": 3,
         "api": "./caiji.js",
         "ext": "http://liu.li0580.com:7785/api.php/provide/vod/"
-   },{
+   }, */
+    {
           "key": "subaibai",
           "name": "素白【📺】",
           "type": 3,
