@@ -521,7 +521,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/bilibili.json"
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/bilibili.json"}
     },
     {
       "key": "Biliych",
@@ -535,7 +535,7 @@
       "searchable": 1,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/biliych.json"
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/biliych.json"}
     },
     {
       "key": "dr_兔小贝",
@@ -563,7 +563,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/少儿教育.json"
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/少儿教育.json"}
     },
     {
       "key": "小学课堂",
@@ -577,7 +577,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/小学课堂.json"
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/小学课堂.json"}
     },
     {
       "key": "初中课堂",
@@ -591,7 +591,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/初中课堂.json"
+      "ext": {"cookie":"file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/初中课堂.json"}
     },
     {
       "key": "高中教育",
@@ -605,7 +605,7 @@
       "searchable": 0,
       "quickSearch": 0,
       "changeable": 0,
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/高中课堂.json"
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/高中课堂.json"}
     }
   ],
   "doh": [
