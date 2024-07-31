@@ -1,0 +1,396 @@
+{
+  "sites": [
+    {
+       "key": "ktv",
+       "name": "KTV",
+       "type": 3,
+       "api": "./ktv_open.js"
+   },
+   {
+       "key": "yinyuetai",
+       "name": "音悦台",
+       "type": 3,
+       "api": "./yinyuetai_open.js"
+   },
+   {
+       "key": "music",
+       "name": "music",
+       "type": 3,
+       "api": "./liumingye_music_open.js"
+   },
+  {
+      "key": "stripchat_live",
+      "name": "jav直播",
+      "type": 3,
+      "api": "./lsq_open.js",
+      "ext": "https://8943.kstore.space/stripchat_live.js"
+    },
+   {
+      "key": "javsb",
+      "name": "javsb",
+      "type": 3,
+      "api": "./lsq_open.js",
+      "ext": "https://8943.kstore.space/javsb.js"
+    },
+    {
+      "key": "maiyoux",
+      "name": "maiyoux",
+      "type": 3,
+      "api": "./maiyoux_open.js"
+    },
+    {
+      "key": "xvideos",
+      "name": "xvideos",
+      "type": 3,
+      "api": "./xvideos_open.js"
+    },
+    {
+      "key": "haudu",
+      "name": "huadu",
+      "type": 3,
+      "api": "./huadu_open.js"
+    },
+    {
+      "key": "mmcl",
+      "name": "mmcl",
+      "type": 3,
+      "api": "./mmcl_open.js"
+    },
+   {
+       "key": "360ba",
+       "name": "360吧",
+       "type": 3,
+       "api": "./360ba_open.js"
+   }, 
+   {
+       "key": "kan80",
+       "name": "kan80",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://152.32.170.60/564892076/box/raw/branch/main/js/cat/rules/test.rule"
+   },  
+   {
+       "key": "dyxs",
+       "name": "电影先生",
+       "type": 3,
+       "api": "./dyxs_open.js"
+   },    
+   {
+       "key": "kanqiu",
+       "name": "88看球",
+       "type": 3,
+       "api": "./kanqiu_open.js"
+   },    
+{
+        "key": "leshi",
+        "name": "乐视采集【📺】",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": "https://leshizyapi.com/api.php/provide/vod/at/json"
+      },
+                   
+ {
+        "key": "49zyw",
+        "name": "四九【📺】",
+        "type": 3,
+        "api": "./caiji.js",
+        "ext": "https://49zyw.com/api.php/provide/vod/from/49zyw"
+    },       
+    {
+      "key": "88js",
+      "name": "⚽ 88┃看球",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/88看球.js",
+      "style": {
+        "type": "list"
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "Jrsjs",
+      "name": "⚽ Jrs┃球迷",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/jrk.js",
+      "style": {
+        "type": "list"
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "酷奇",
+      "name": "🎤酷奇┃MV",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/酷奇MV.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "MTV",
+      "name": "🎧明星┃MV",
+      "type": 3,
+      "api": "csp_Bili",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/MTV.json"
+    },
+    {
+      "key": "csp_Yj1211",
+      "name": "📽️网红┃直播",
+      "type": 3,
+      "api": "csp_Yj1211",
+      "playerType": "1",
+      "searchable": 0,
+      "quickSearch": 1,
+      "changeable": 0
+    },
+    {
+      "key": "虎牙直播js",
+      "name": "🐯虎牙┃直播",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/huya2.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1.755
+      },
+      "playerType": "1",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "斗鱼js",
+      "name": "🐟斗鱼┃直播",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/斗鱼直播.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1.755
+      },
+      "playerType": "1",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "聚短视频js",
+      "name": "📽️聚短┃视频",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/短视频.js",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "有声小说js",
+      "name": "🎧有声┃小说",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/有声小说吧.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "Aid",
+      "name": "🚑急救┃教学",
+      "type": 3,
+      "api": "csp_FirstAid",
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 3.8
+      }
+    },
+    {
+      "key": "push_agent",
+      "name": "🛴手机┃推送",
+      "type": 3,
+      "api": "csp_Push",
+      "searchable": 0,
+      "quickSearch": 0,
+      "ext": {
+        "aliToken": "tvfan/token.txt",
+        "quarkCookie": "tvfan/cookie.txt",
+        "from": "4k|auto|fhd"
+      }
+    },
+    {
+      "key": "Bili",
+      "name": "🅱哔哔┃合集",
+      "type": 3,
+      "api": "csp_Bili",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 1,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/bilibili.json"}
+    },
+    {
+      "key": "Biliych",
+      "name": "🅱明星┃演唱会",
+      "type": 3,
+      "api": "csp_Bili",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 1,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/biliych.json"}
+    },
+    {
+      "key": "dr_兔小贝",
+      "name": "📚儿童┃启蒙",
+      "type": 3,
+      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/%E5%85%94%E5%B0%8F%E8%B4%9D.js",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0
+    },
+    {
+      "key": "少儿教育",
+      "name": "📚少儿┃教育",
+      "type": 3,
+      "api": "csp_Bili",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/少儿教育.json"}
+    },
+    {
+      "key": "小学课堂",
+      "name": "📚小学┃课堂",
+      "type": 3,
+      "api": "csp_Bili",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/小学课堂.json"}
+    },
+    {
+      "key": "初中课堂",
+      "name": "📚初中┃课堂",
+      "type": 3,
+      "api": "csp_Bili",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": {"cookie":"file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/初中课堂.json"}
+    },
+    {
+      "key": "高中教育",
+      "name": "📚高中┃课堂",
+      "type": 3,
+      "api": "csp_Bili",
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      },
+      "searchable": 0,
+      "quickSearch": 0,
+      "changeable": 0,
+      "ext": {"cookie": "file://TV/bili_cookie.txt","json":"https://gitlab.com/fantaiying/ext/-/raw/main/高中课堂.json"}
+    }
+  ],
+  "doh": [
+    {
+      "name": "Google",
+      "url": "https://dns.google/dns-query",
+      "ips": [
+        "8.8.4.4",
+        "8.8.8.8"
+      ]
+    },
+    {
+      "name": "Cloudflare",
+      "url": "https://cloudflare-dns.com/dns-query",
+      "ips": [
+        "1.1.1.1",
+        "1.0.0.1",
+        "2606:4700:4700::1111",
+        "2606:4700:4700::1001"
+      ]
+    },
+    {
+      "name": "AdGuard",
+      "url": "https://dns.adguard.com/dns-query",
+      "ips": [
+        "94.140.14.140",
+        "94.140.14.141"
+      ]
+    },
+    {
+      "name": "DNSWatch",
+      "url": "https://resolver2.dns.watch/dns-query",
+      "ips": [
+        "84.200.69.80",
+        "84.200.70.40"
+      ]
+    },
+    {
+      "name": "Quad9",
+      "url": "https://dns.quad9.net/dns-quer",
+      "ips": [
+        "9.9.9.9",
+        "149.112.112.112"
+      ]
+    }
+  ],
+  "parses": [
+    {
+      "name": "leospring",
+      "type": 1,
+      "url": "https://ldhz.li0580.com/api/jsonindex.php/?key=7jaNh1pTt8L2YmleQw&url="
+    },{
+      "name": "蹲街捏蚂蚁",
+      "type": 1,
+      "url": "http://110.42.7.182:881/api/?key=c4c3p0YQDnvmdaoVnT&url="
+    }]
+}
