@@ -657,11 +657,13 @@
       "name": "leospring",
       "type": 1,
       "url": "https://ldhz.li0580.com//api/jsonindex.php/?key=aeiwBUFhXzruM4poio&url="
-    },{
+    }
+    /** ,{
       "name": "蹲街捏蚂蚁",
       "type": 1,
       "url": "http://110.42.7.182:881/api/?key=c4c3p0YQDnvmdaoVnT&url="
-    }],
+    } */
+  ],
   "lives": [
     {
       "name": "live",
