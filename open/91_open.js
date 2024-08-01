@@ -138,11 +138,16 @@ async function play(flag, id, flags) {
     let playUrl = siteUrl + id;
     try {
         const html = await request(playUrl);
-        if (html.indexOf('?url=') > 0) {
-            playUrl = html.split('?url=')[1].split('"')[0];
+        if (html.indexOf('url=') > 0) {
+            playUrl = html.split('url=')[1].split('"')[0];
             return JSON.stringify({
                 parse: 0,
                 url: playUrl,
+                header: {
+                    'Origin': 'https://ha.lilongfei.cn',
+                    'Referer': 'https://ha.lilongfei.cn/',
+                    'User-Agent': MOBILE_UA
+                }
             });
         }
     } catch (error) {
