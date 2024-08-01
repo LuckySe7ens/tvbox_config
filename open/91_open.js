@@ -1,7 +1,7 @@
 import { Crypto, load, _ } from './lib/cat.js';
 
 //地址
-let siteUrl = 'https://cn1.91-short.com';
+let siteUrl = 'https://cn1.91short.com';
 let siteKey = '';
 let siteType = 0;
 let headers = {};
