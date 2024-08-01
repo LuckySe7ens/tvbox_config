@@ -25,6 +25,12 @@
       "api": "./lsq_open.js",
       "ext": "https://8943.kstore.space/stripchat_live.js"
     },
+    {
+      "key": "91",
+      "name": "91",
+      "type": 3,
+      "api": "./91_open.js"
+    },
    {
       "key": "javsb",
       "name": "javsb",
