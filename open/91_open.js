@@ -26,7 +26,8 @@ async function request(reqUrl) {
     let res = await req(reqUrl, {
         method: 'get',
         headers: {
-            'User-Agent': MOBILE_UA
+            'User-Agent': MOBILE_UA,
+            'Cookie': 'language=zh',
         }
     });
     let content = res.content;
