@@ -92,7 +92,7 @@
       "playerType": 1,
       "type": 3,
       "api": "csp_AppYsV2",
-      "playurl": "json：https://ldhz.li0580.com//api/jsonindex.php/?key=aeiwBUFhXzruM4poio&url=",
+      "playurl": "json:https://ldhz.li0580.com//api/jsonindex.php/?key=aeiwBUFhXzruM4poio&url=",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -658,11 +658,11 @@
       "type": 1,
       "url": "https://ldhz.li0580.com//api/jsonindex.php/?key=aeiwBUFhXzruM4poio&url="
     }
-    /** ,{
+    ,{
       "name": "蹲街捏蚂蚁",
       "type": 1,
       "url": "http://110.42.7.182:881/api/?key=c4c3p0YQDnvmdaoVnT&url="
-    } */
+    }
   ],
   "lives": [
     {
@@ -670,6 +670,12 @@
       "type": 0,
       "url": "https://www.huichunniao.cn/xh/lib/live.txt",
       "playerType": 1
+    },
+    {
+      "name":"ETH(JS)",
+      "api":"https://tang.hz.cz/js/ethtv.js",
+      "type":3,
+      "ua":"okhttp/4.12.0",
     },
     {
       "name": "XIUTAN",
