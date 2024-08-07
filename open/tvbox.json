@@ -87,16 +87,25 @@
         "api": "./zxzj_open.js"
    }, 
     {
-      "key": "朱总麒麟",
-      "name": "🐧无广HDR-4K",
-      "playerType": 1,
-      "type": 3,
-      "api": "csp_AppYsV2",
-      "playurl": "json:https://ldhz.li0580.com//api/jsonindex.php/?key=aeiwBUFhXzruM4poio&url=",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "ext": " http://tx.jingyang.design:1102/api.php/app/"
+      "key":"hipy_js_腾云驾雾[官]",
+      "name":"首选4K",
+      "type":3,
+      "api":"http://101.201.33.24/drpy_dzlive/drpy_libs/drpy2.min.js",
+      "searchable":1,
+      "quickSearch":1,
+      "filterable":1,
+      "order_num":0,
+      "ext":"http://101.201.33.24/drpy_dzlive/drpy_js/腾云驾雾[官].js"
+    },
+    {
+        "key": "cms2",
+        "name": "备用4K",
+        "type": 3,
+        "api": "csp_AppYsV2",
+        "searchable": 1,
+        "quickSearch": 1,
+        "filterable": 1,
+        "ext": "http://103.215.127.30:6688/api.php/app/"
     },
     {
        "key": "4kav",
@@ -111,14 +120,14 @@
        "type": 3,
        "api": "csp_Wexhuaruitv",
       "jar": "https://8943.kstore.space/wex_mod.jar"
-   }, **/
+   },
     {
        "key": "lurenjia",
        "name": "4K 路人甲",
        "type": 3,
        "api": "./lsq_open.js",
       "ext": "https://8943.kstore.space/lurenjia.js"
-   },
+   }, */
     {
       "key": "4K yuluo",
       "name": "4K 雨落",
@@ -654,20 +663,15 @@
   ],
   "parses": [
     {
-      "name": "leospring",
+      "name": "4K解析",
       "type": 1,
-      "url": "https://ldhz.li0580.com//api/jsonindex.php/?key=aeiwBUFhXzruM4poio&url="
-    }
-   /** ,{
-      "name": "蹲街捏蚂蚁",
-      "type": 1,
-      "url": "http://110.42.7.182:881/api/?key=c4c3p0YQDnvmdaoVnT&url="
+      "url": "http://jxla.cc.33love.cn/api/?key=XnFyRhzuWwg1naDNOx&url="
     }
     ,{
-      "name": "免费分享",
+      "name": "蹲街捏蚂蚁",
       "type": 1,
       "url": "http://159.75.157.29:75/yylx/?uid=66523&key=5433236&url="
-    } */
+    }
   ],
   "lives": [
     {
