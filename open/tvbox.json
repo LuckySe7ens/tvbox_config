@@ -88,7 +88,7 @@
    }, 
     {
       "key":"hipy_js_腾云驾雾[官]",
-      "name":"首选4K",
+      "name":"腾云驾雾",
       "type":3,
       "api":"http://101.201.33.24/drpy_dzlive/drpy_libs/drpy2.min.js",
       "searchable":1,
@@ -99,7 +99,7 @@
     },
     {
         "key": "cms2",
-        "name": "备用4K",
+        "name": "备用",
         "type": 3,
         "api": "csp_AppYsV2",
         "searchable": 1,
@@ -662,12 +662,12 @@
     }
   ],
   "parses": [
-    {
+    /** {
       "name": "4K解析",
       "type": 1,
       "url": "http://jxla.cc.33love.cn/api/?key=XnFyRhzuWwg1naDNOx&url="
-    }
-    ,{
+    }, */
+    {
       "name": "蹲街捏蚂蚁",
       "type": 1,
       "url": "http://159.75.157.29:75/yylx/?uid=66523&key=5433236&url="
