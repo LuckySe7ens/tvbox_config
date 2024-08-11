@@ -92,10 +92,21 @@
         "name": "在家【📺】",
         "type": 3,
         "api": "./zxzj_open.js"
-   }, 
+   },
+    {
+      "key": "hipy_js_奇珍异兽[官]",
+      "name": "4K主线[🥝]",
+      "type": 3,
+      "api": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_libs/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "order_num": 0,
+      "ext": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_js/奇珍异兽[官].js"
+    },
     {
       "key":"hipy_js_腾云驾雾[官]",
-      "name":"4K主线",
+      "name":"4K主线[☁️]",
       "type":3,
       "api":"https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_libs/drpy2.min.js",
       "searchable":1,
@@ -679,7 +690,7 @@
       "type": 1,
       "url": "http://159.75.157.29:75/yylx/?uid=66523&key=5433236&url="
     }
-    ,{
+    /**,{
       "name": "蹲街捏蚂蚁",
       "type": 1,
       "url": "http://pan.qiaoji8.com/tvbox/neibu.php?url=",
@@ -737,7 +748,7 @@
           "User-Agent": "okhttp/4.9.1"
         }
       }
-    }
+    } */
   ],
   "lives": [
     {
