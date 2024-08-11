@@ -55,6 +55,13 @@
        "ext": "https://8943.kstore.space/keke.js"
    },
     {
+       "key": "slys",
+       "name": "闪雷电影院",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/sldy.js"
+   },
+    {
        "key": "noys",
        "name": "NO视频",
        "type": 3,
@@ -90,7 +97,7 @@
       "key":"hipy_js_腾云驾雾[官]",
       "name":"4K主线",
       "type":3,
-      "api":"http://101.201.33.24/drpy_dzlive/drpy_libs/drpy2.min.js",
+      "api":"https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
       "searchable":1,
       "quickSearch":1,
       "filterable":1,
@@ -665,12 +672,17 @@
     {
       "name": "4K解析",
       "type": 1,
-      "url": "http://jxla.cc.33love.cn/api/?key=Ya0Cp4zg5wVnEjJRrY&url="
+      "url": "http://jxla.cc.33love.cn/api/?key=rkS3SWDexDWYJBAtLn&url="
     },
     {
-      "name": "蹲街捏蚂蚁",
+      "name": "leospring",
       "type": 1,
       "url": "http://159.75.157.29:75/yylx/?uid=66523&key=5433236&url="
+    }
+    ,{
+      "name": "蹲街捏蚂蚁",
+      "type": 1,
+      "url": "http://jk.mcyan.cn/index.php?url="
     }
   ],
   "lives": [
