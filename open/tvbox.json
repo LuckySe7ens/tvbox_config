@@ -97,7 +97,7 @@
       "key":"hipy_js_腾云驾雾[官]",
       "name":"4K主线",
       "type":3,
-      "api":"https://github.moeyy.xyz/https://raw.githubusercontent.com/hjdhnx/dr_py/main/libs/drpy2.min.jss",
+      "api":"https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_libs/drpy2.min.js",
       "searchable":1,
       "quickSearch":1,
       "filterable":1,
