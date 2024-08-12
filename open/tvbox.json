@@ -1,6 +1,6 @@
 {
   //"spider": "https://8943.kstore.space/custom_spider.jar",
-  "spider": "https://8943.kstore.space/lsq.jar;md5;170c7531184965aaeecb12e0c9307cbe",
+  "spider": "https://8943.kstore.space/lsq.jar;md5;d163573f8ea1a791d35c308b6964fd33",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -58,8 +58,7 @@
        "key": "mqsp",
        "name": "麻雀视频",
        "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/mqsp.js"
+       "api": "csp_Mqsp"
    },
     {
        "key": "zzys",
@@ -72,8 +71,7 @@
        "key": "slys",
        "name": "闪雷电影院",
        "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/sldy.js"
+       "api": "csp_Shanlei"
    },
     {
        "key": "noys",
