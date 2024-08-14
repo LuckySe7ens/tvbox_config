@@ -692,11 +692,11 @@
     }
   ],
   "parses": [
-    {
+    /**{
       "name": "4K解析",
       "type": 1,
       "url": "http://jxla.cc.33love.cn/api/?key=jD4rM1DVqV3A4obZ74&url="
-    },
+    },*/
     {
       "name": "4K解析2",
       "type": 1,
