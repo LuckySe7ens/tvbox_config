@@ -1,6 +1,6 @@
 {
   //"spider": "https://8943.kstore.space/custom_spider.jar",
-  "spider": "https://8943.kstore.space/lsq.jar;md5;d163573f8ea1a791d35c308b6964fd33",
+  "spider": "https://8943.kstore.space/lsq.jar;md5;a735a3d3348d751bcdf2cf8291f17c33",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -696,6 +696,11 @@
       "name": "4K解析",
       "type": 1,
       "url": "http://jxla.cc.33love.cn/api/?key=jD4rM1DVqV3A4obZ74&url="
+    },
+    {
+      "name": "4K解析",
+      "type": 1,
+      "url": "http://127.0.0.1:9978/proxy?do=vip&id=19&url="
     },
     {
       "name": "leospring",
