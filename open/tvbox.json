@@ -71,7 +71,8 @@
        "key": "slys",
        "name": "闪雷电影院",
        "type": 3,
-       "api": "csp_Shanlei"
+       "api": "csp_Shanlei",
+      "ext": "http://114.103.30.6:18008"
    },
     {
        "key": "noys",
