@@ -693,7 +693,7 @@
     }
   ],
   "parses": [
-    {
+    /**{
       "name": "4K解析",
       "type": 1,
       "url": "http://39.104.230.177:1122/lxjx/mylr.php?url="
@@ -711,7 +711,7 @@
       "name": "leospring",
       "type": 1,
       "url": "http://115.231.220.36:8801/jx/tvbox/zy2.php?url="
-    },
+    }, */
     {
       "name": "4K蓝光",
       "type": 1,
@@ -779,9 +779,9 @@
   ],
   "lives": [
     {
-      "name":"ETH(JS)",
-      "api":"https://tang.hz.cz/js/ethtv.js",
-      "type":3,
+      "name":"smart",
+      "api":"https://fm1077.serv00.net/SmartTV.m3u",
+      "type":0,
       "ua":"okhttp/4.12.0"
     },
     {
