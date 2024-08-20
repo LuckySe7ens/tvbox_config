@@ -701,7 +701,8 @@
     {
       "name": "4K解析2",
       "type": 1,
-      "url": "http://127.0.0.1:9978/proxy?do=vip&url=",
+      //"url": "http://127.0.0.1:9978/proxy?do=vip&url=",
+      "url":"http://198.44.173.91:1234/cnm/json.php?url=",
       "header": {
           "User-Agent": "com.github.tvbox.osc.base.App/3.4.8 (Linux;Android 12) ExoPlayerLib/2.14.2"
         }
@@ -709,10 +710,10 @@
     ,{
       "name": "leospring",
       "type": 1,
-      "url": "http://159.75.157.29:75/yylx/?uid=66523&key=5433236&url="
+      "url": "http://115.231.220.36:8801/jx/tvbox/zy2.php?url="
     },
     {
-      "name": "高清蓝光",
+      "name": "4K蓝光",
       "type": 1,
       "url": "http://43.242.202.173:25253/json.php?url="
     }
