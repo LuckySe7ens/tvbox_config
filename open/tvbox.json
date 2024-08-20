@@ -693,11 +693,11 @@
     }
   ],
   "parses": [
-    /**{
+    {
       "name": "4K解析",
       "type": 1,
-      "url": "http://jxla.cc.33love.cn/api/?key=jD4rM1DVqV3A4obZ74&url="
-    },*/
+      "url": "http://39.104.230.177:1122/lxjx/mylr.php?url="
+    },
     {
       "name": "4K解析2",
       "type": 1,
@@ -710,6 +710,11 @@
       "name": "leospring",
       "type": 1,
       "url": "http://159.75.157.29:75/yylx/?uid=66523&key=5433236&url="
+    },
+    {
+      "name": "高清蓝光",
+      "type": 1,
+      "url": "http://43.242.202.173:25253/json.php?url="
     }
     /**,{
       "name": "蹲街捏蚂蚁",
