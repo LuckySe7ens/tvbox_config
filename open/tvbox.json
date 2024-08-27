@@ -723,6 +723,16 @@
       "url": "https://cdn.suxun.site/api/?key=7QeqS18ZCrJgj0BSOn&url="
     },
     {
+      "name": "test1",
+      "type": 1,
+      "url": "http://127.0.0.1:9978/proxy?do=vip&id=1&url="
+    },
+    {
+      "name": "test2",
+      "type": 1,
+      "url": "http://127.0.0.1:9978/proxy?do=vip&url="
+    },
+    {
       "name": "4K蓝光",
       "type": 1,
       "url": "http://43.242.202.173:25253/json.php?url="
