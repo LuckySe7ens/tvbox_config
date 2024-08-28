@@ -87,6 +87,17 @@
        "type": 3,
        "api": "./nangua_open.js"
    },
+    {
+            "key": "lurenjia",
+            "name": "路人甲┃1080P",
+            "playerType": 1,
+            "type": 3,
+            "api": "csp_AppYsV2",
+            "searchable": 1,
+            "quickSearch": 1,
+            "filterable": 1,
+            "ext": "http://122.228.85.203:1000/api.php/app/"
+        },
     /** {
         "key": "gaoqing360",
         "name": "高清360",
@@ -717,6 +728,35 @@
       "type": 1,
       "url": "http://39.104.230.177:1122/lxjx/myyk.php?url="
     },
+    {
+            "name": "4K解析",
+            "type": 1,
+            "url": "http://www.mpanso.com/woaini.php?url=",
+            "ext": {
+                "flag": [
+                    "qq",
+                    "腾讯",
+                    "qiyi",
+                    "爱奇艺",
+                    "奇艺",
+                    "youku",
+                    "优酷",
+                    "sohu",
+                    "搜狐",
+                    "letv",
+                    "乐视",
+                    "mgtv",
+                    "芒果",
+                    "tnmb",
+                    "seven",
+                    "bilibili",
+                    "1905"
+                ],
+                "header": {
+                    "User-Agent": "okhttp/4.9.1"
+                }
+            }
+        },
     {
       "name": "4K|1080",
       "type": 1,
