@@ -72,7 +72,7 @@
        "name": "闪雷电影院",
        "type": 3,
        "api": "csp_Shanlei",
-      "ext": "http://114.103.30.6:18008"
+      "ext": "http://114.103.30.151:18008"
    },
     {
        "key": "noys",
@@ -722,12 +722,12 @@
       "name": "leospring",
       "type": 1,
       "url": "http://115.231.220.36:8801/jx/tvbox/zy2.php?url="
-    }, */
+    }, 
     {
       "name": "leospring",
       "type": 1,
       "url": "http://39.104.230.177:1122/lxjx/myyk.php?url="
-    },
+    },*/
     {
             "name": "4K解析",
             "type": 1,
@@ -763,12 +763,17 @@
       "url": "https://cdn.suxun.site/api/?key=7QeqS18ZCrJgj0BSOn&url="
     },
     {
-      "name": "test1",
+      "name": "4K|test",
+      "type": 1,
+      "url": "http://127.0.0.1:9978/proxy?do=vip&id=-1&url="
+    },
+    {
+      "name": "4K|test1",
       "type": 1,
       "url": "http://127.0.0.1:9978/proxy?do=vip&id=1&url="
     },
     {
-      "name": "test2",
+      "name": "4K|test2",
       "type": 1,
       "url": "http://127.0.0.1:9978/proxy?do=vip&url="
     },
