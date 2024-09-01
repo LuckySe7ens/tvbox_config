@@ -129,25 +129,16 @@
       "ext": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_js/奇珍异兽[官].js"
     },
     {
-      "key":"hipy_js_腾云驾雾[官]",
-      "name":"4K主线[☁️]",
-      "type":3,
-      "api":"https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_libs/drpy2.min.js",
-      "searchable":1,
-      "quickSearch":1,
-      "filterable":1,
-      "order_num":0,
-      "ext":"https://8943.kstore.space/腾云驾雾.js"
-    },
-    {
-        "key": "cms2",
-        "name": "4k备用",
-        "type": 3,
-        "api": "csp_AppYsV2",
-        "searchable": 1,
-        "quickSearch": 1,
-        "filterable": 1,
-        "ext": "http://103.215.127.30:6688/api.php/app/"
+      "key": "hipy_js_腾云驾雾[官]",
+      "name": "🌞腾腾┃解析",
+      "type": 3,
+      "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "order_num": 0,
+      "changeable": 0,
+      "ext": "http://www.mpanso.com/小米/ttt1.js"
     },
     {
        "key": "4kav",
@@ -704,6 +695,16 @@
     }
   ],
   "parses": [
+    {
+            "name": "Json聚合",
+            "type": 3,
+            "url": "Demo"
+        },
+        {
+            "name": "Web聚合",
+            "type": 3,
+            "url": "Web"
+        },
     /**{
       "name": "4K解析",
       "type": 1,
