@@ -119,18 +119,18 @@
    },
     {
       "key": "hipy_js_奇珍异兽[官]",
-      "name": "奇异果[🥝]",
+      "name": "芒果[🥭]",
       "type": 3,
-      "api": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_libs/drpy2.min.js",
+      "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
       "order_num": 0,
-      "ext": "https://gitlab.com/duomv/dzhipy/-/raw/main/drpy_js/奇珍异兽[官].js"
+      "ext": "http://www.mpanso.com/%E5%B0%8F%E7%B1%B3/guoguo.js"
     },
     {
       "key": "hipy_js_腾云驾雾[官]",
-      "name": "🌞腾腾┃解析",
+      "name": "🌞腾腾┃4K",
       "type": 3,
       "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
       "searchable": 1,
@@ -138,7 +138,7 @@
       "filterable": 1,
       "order_num": 0,
       "changeable": 0,
-      "ext": "http://www.mpanso.com/小米/ttt1.js"
+      "ext": "http://www.mpanso.com/%E5%B0%8F%E7%B1%B3/tx.js"
     },
     {
        "key": "4kav",
