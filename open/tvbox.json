@@ -41,6 +41,18 @@
        "ext": "https://8943.kstore.space/gzys.js"
    },
     {
+      "key": "瓜子",
+      "name": "瓜子2",
+      "type": 3,
+      "api": "https://cdn.gitmirror.com/gl/leospring1/leo/main/drpy.min.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "order_num": 0,
+      "changeable": 0,
+      "ext": "https://8943.kstore.space/guazi.js"
+    },
+    {
        "key": "ddjz",
        "name": "多多追剧",
        "type": 3,
