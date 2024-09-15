@@ -37,7 +37,7 @@ async function request(url, data) {
         data: param,
     });
     let result = JSON.parse(res.content);
-    let aesKeys = JSON.parse(rsaX('RSA/PKCS1', false, false, result.data.keys, true, rsaKey, false));
+    let aesKeys = JSON.parse(rsaX('RSA/ECB/PKCS1', false, false, result.data.keys, true, rsaKey, false));
     return aesDecode(result.data.response_key, aesKeys.key, aesKeys.iv, 'hex');
 }
 
