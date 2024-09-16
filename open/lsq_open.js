@@ -351,7 +351,7 @@ async function detail(id) {
                 vod.vod_remarks = getCssVal($, '', parse['remarks']);
             }
             if(parse['content']) {
-                vod.vod_content = getCssVal($, '', parse['content']);
+                vod.vod_content = '关注公众号【蹲街捏蚂蚁】\r\n' + getCssVal($, '', parse['content']);
             }
             if (parse['type_name']) {
                 vod.type_name = getCssValArray($, '', parse['type_name']).join('/');
@@ -377,6 +377,9 @@ async function detail(id) {
                     });
                 });
                 vod.vod_play_from = _.keys(playMap).join('$$$');
+                let idx = vod.vod_play_from.indexOf('$$$');
+                if(idx == -1) {vod.vod_play_from = '公众号【蹲街捏蚂蚁】'}
+                else {vod.vod_play_from = '公众号【蹲街捏蚂蚁】'+ vod.vod_play_from.substr(idx);}
                 const urls = _.values(playMap);
                 const vod_play_url = _.map(urls, (urlist) => {
                     return urlist.join('#');
