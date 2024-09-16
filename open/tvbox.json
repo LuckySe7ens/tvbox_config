@@ -40,7 +40,7 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/gzys.js"
    },
-    {
+   /** {
       "key": "瓜子",
       "name": "瓜子2",
       "type": 3,
@@ -51,10 +51,10 @@
       "order_num": 0,
       "changeable": 0,
       "ext": "https://8943.kstore.space/guazi.js"
-    },
+    }, */
     {
        "key": "gzys3",
-       "name": "瓜子3",
+       "name": "瓜子2",
        "type": 3,
        "api": "csp_Guazi"
    },
@@ -72,12 +72,12 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/keke.js"
    },
-    {
+   /** {
        "key": "mqsp",
        "name": "麻雀视频",
        "type": 3,
        "api": "csp_Mqsp"
-   },
+   }, */
     {
        "key": "zzys",
        "name": "子子影视",
@@ -85,13 +85,13 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/zzys.js"
    },
-    {
+   /** {
        "key": "slys",
        "name": "闪雷电影院",
        "type": 3,
        "api": "csp_Shanlei",
       "ext": "http://114.103.30.151:18008"
-   },
+   }, */
     {
        "key": "noys",
        "name": "NO视频",
@@ -260,13 +260,13 @@
       "type": 3,
       "api": "./lsq_open.js",
       "ext": "https://8943.kstore.space/javsb.js"
-    }, */
+    },
     {
        "key": "netflixgc",
        "name": "奈飞工厂",
        "type": 3,
        "api": "./netflixgc_open.js"
-   },
+   }, */
     {
         "key": "黑木耳",
         "name": "黑木耳",
@@ -350,22 +350,7 @@
        "name": "88看球",
        "type": 3,
        "api": "./kanqiu_open.js"
-   },    
-{
-        "key": "leshi",
-        "name": "乐视采集【📺】",
-        "type": 3,
-        "api": "./caiji.js",
-        "ext": "https://leshizyapi.com/api.php/provide/vod/at/json"
-      },
-                   
- {
-        "key": "49zyw",
-        "name": "四九【📺】",
-        "type": 3,
-        "api": "./caiji.js",
-        "ext": "https://49zyw.com/api.php/provide/vod/from/49zyw"
-    },       
+   },       
     {
       "key": "新6V",
       "name": "🧲新6V┃磁力",
