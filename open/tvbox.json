@@ -1,6 +1,6 @@
 {
   //"spider": "https://8943.kstore.space/custom_spider.jar",
-  "spider": "https://8943.kstore.space/lsq.jar",
+  "spider": "https://8943.kstore.space/lsq.jar;md5;340a8a59eee6043fe23a3a0266291541",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
