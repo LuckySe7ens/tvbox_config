@@ -798,7 +798,7 @@
     {
       "name": "4K|test",
       "type": 1,
-      "url": "http://127.0.0.1:9978/proxy?do=vip&id=-1&url="
+      "url": "http://127.0.0.1:9978/proxy?do=vip&id=2&url="
     },
     {
       "name": "4K|test1",
