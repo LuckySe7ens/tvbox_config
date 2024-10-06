@@ -11,6 +11,13 @@
        "ext": "https://8943.kstore.space/jpyy.js"
    },
     {
+       "key": "djw",
+       "name": "无忧|短剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/djw.js"
+   },
+    {
        "key": "ainidj",
        "name": "爱你|短剧",
        "type": 3,
