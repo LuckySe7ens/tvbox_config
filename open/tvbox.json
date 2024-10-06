@@ -10,27 +10,6 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/jpyy.js"
    },
-    {
-       "key": "djw",
-       "name": "无忧|短剧",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/djw.js"
-   },
-    {
-       "key": "ainidj",
-       "name": "爱你|短剧",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/ainidj.js"
-   },
-    {
-       "key": "djtt",
-       "name": "天堂|短剧",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/djtt.js"
-   },
    {
       "key": "jianpian",
       "name": "🐭荐片┃P2P",
@@ -197,6 +176,37 @@
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/4kav.js"
+   },
+    {
+        "key": "星芽短剧",
+        "name": "🌟星芽┃短剧",
+        "type": 3,
+        "api": "csp_AppXY",
+        "jar": "http://我不是.摸鱼儿.top/by/jar/danmu.php",
+        "searchable": 1,
+        "quickSearch": 0,
+        "filterable": 0
+    },
+    {
+       "key": "djw",
+       "name": "无忧┃短剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/djw.js"
+   },
+    {
+       "key": "ainidj",
+       "name": "爱你┃短剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/ainidj.js"
+   },
+    {
+       "key": "djtt",
+       "name": "天堂┃短剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/djtt.js"
    },
  /**   {
        "key": "bulei",
