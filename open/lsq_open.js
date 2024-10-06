@@ -59,6 +59,7 @@ async function init(cfg) {
     siteType = cfg.stype;
     if (cfg.ext) {
         await parseRule(cfg.ext);//解析规则
+        headers.Referer = HOST;
     }
     if (rule.initHost) {
         html = await request(HOST);
