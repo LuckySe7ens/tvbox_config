@@ -10,6 +10,13 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/jpyy.js"
    },
+    {
+       "key": "ainidj",
+       "name": "爱你|短剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/ainidj.js"
+   },
    {
       "key": "jianpian",
       "name": "🐭荐片┃P2P",
