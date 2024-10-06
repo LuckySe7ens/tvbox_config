@@ -17,6 +17,13 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/ainidj.js"
    },
+    {
+       "key": "djtt",
+       "name": "天堂|短剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/djtt.js"
+   },
    {
       "key": "jianpian",
       "name": "🐭荐片┃P2P",
