@@ -1,4 +1,4 @@
-import { Crypto, load, _ } from './lib/cat.js';
+import { Crypto, load, _ } from 'assets://js/lib/cat.js';
 
 /**
  * 发布页：https://kan80.app/
@@ -425,7 +425,7 @@ async function play(flag, id, flags) {
             console.log(error);
         }
     }
-    if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?'))) {
+    if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?')[0])) {
         return JSON.stringify({
             parse: 0,
             url: playUrl,
@@ -444,7 +444,7 @@ async function play(flag, id, flags) {
                 playUrl = unescape(base64Decode(playUrl));
             }
         }
-        if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?'))) {
+        if(/\.(m3u8|mp4|mkv|flv|mp3|m4a|aac)$/.test(playUrl.split('?')[0])) {
             return JSON.stringify({
                 parse: 0,
                 url: playUrl,
