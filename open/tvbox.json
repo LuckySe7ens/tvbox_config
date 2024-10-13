@@ -85,13 +85,13 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/zzys.js"
    },
-   /** {
+   {
        "key": "slys",
        "name": "闪雷电影院",
        "type": 3,
        "api": "csp_Shanlei",
-      "ext": "http://114.103.30.151:18008"
-   }, */
+      "ext": "http://36.56.71.217:18008"
+   },
     {
        "key": "noys",
        "name": "NO视频",
