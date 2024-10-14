@@ -10,6 +10,12 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/jpyy.js"
    },
+    {
+       "key": "live",
+       "name": "聚合直播",
+       "type": 3,
+       "api": "https://8943.kstore.space/live_open.js"
+   },
    {
       "key": "jianpian",
       "name": "🐭荐片┃P2P",
