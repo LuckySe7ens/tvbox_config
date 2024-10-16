@@ -2,7 +2,8 @@
 
     //let siteUrl = 'https://m.xiangdao.me';
     //let siteUrl ='https://v.nmvod.cn';
-    let siteUrl = 'https://wwgz.cn';
+    //let siteUrl = 'https://wwgz.cn';
+    let siteUrl = 'https://nmvod.cnmcom.com';
     let siteKey = '';
     let siteType = 0;
     let headers = {
