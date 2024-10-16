@@ -96,15 +96,15 @@
         try {
             const html = await request(siteUrl + id);
             let $ = load(html);
-            let content = $('.jjie').text();
-            let director = _.map($('.d_z_y:eq(0) font a'), (n) => {
+            let content = $('.detail-con p').text();
+            let director = _.map($('.desc_item:eq(2) font a'), (n) => {
                 return $(n).text();
             }).join(' ');
-            let actor = _.map($('.d_z_y:eq(1) font a'), (n) => {
+            let actor = _.map($('.desc_item:eq(1) font a'), (n) => {
                 return $(n).text();
             }).join(' ');
 
-            let play1Url = siteUrl + $('.soyurl ul li a').attr('href');
+            let play1Url = siteUrl + $('.greenBtn').attr('href');
             $ = load(await request(play1Url));
             let nameUrls = $('div.player > script:nth-child(1)').text().split("mac_url='")[1].split("';")[0];
             let playUrls = [];
