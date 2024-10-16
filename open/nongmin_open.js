@@ -229,7 +229,7 @@
     async function getVideos(url) {
         const html = await request(url);
         const $ = load(html);
-        const cards = $('ul.list_01 li')
+        const cards = $('ul.resize_list li')
         let videos = _.map(cards, (n) => {
             let id = $($(n).find('a')[0]).attr('href');
             let name = $($(n).find('a')[0]).attr('title');
