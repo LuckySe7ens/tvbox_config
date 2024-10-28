@@ -147,8 +147,9 @@
       "key": "摘星",
       "name": "摘星",
       "type": 3,
-      //"api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
-      "api":"http://我不是.摸鱼儿.top/json/js/drpy.min.js",
+      "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
+      //"api":"http://我不是.摸鱼儿.top/json/js/drpy.min.js",
+      //"api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -189,8 +190,8 @@
         "key": "星芽短剧",
         "name": "🌟星芽┃短剧",
         "type": 3,
-        "api": "csp_AppXY",
-        "jar": "http://我不是.摸鱼儿.top/by/jar/danmu.php",
+        "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+        "ext": "https://8943.kstore.space/xingya_duanju.js"
         "searchable": 1,
         "quickSearch": 0,
         "filterable": 0
