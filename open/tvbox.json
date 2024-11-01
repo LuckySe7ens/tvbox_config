@@ -218,6 +218,13 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/djtt.js"
    },
+    {
+       "key": "leting8",
+       "name": "乐听吧┃听书",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://8943.kstore.space/leting8.js"
+   },
  /**   {
        "key": "bulei",
        "name": "4K 布蕾",
