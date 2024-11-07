@@ -171,8 +171,8 @@
       "key": "hipy_js_腾云驾雾[官]",
       "name": "腾腾[🐴]┃4K",
       "type": 3,
-      //"api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
-      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+      "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
+     // "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
       "searchable": 1,
       "quickSearch": 1,
       "filterable": 1,
@@ -191,7 +191,7 @@
         "key": "星芽短剧",
         "name": "🌟星芽┃短剧",
         "type": 3,
-        "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
+        "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
         "ext": "https://8943.kstore.space/xingya_duanju.js",
         "searchable": 1,
         "quickSearch": 0,
@@ -384,7 +384,7 @@
        "type": 3,
        "api": "./ktv_open.js"
    },
-    {
+    /**{
       "key": "iktv",
       "name": "iktv",
       "type": 3,
@@ -392,7 +392,7 @@
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
-    },
+    }, */
    {
        "key": "yinyuetai",
        "name": "音悦台",
