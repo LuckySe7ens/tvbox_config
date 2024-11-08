@@ -196,7 +196,7 @@
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/4kav.js"
    },
-    {
+   /** {
         "key": "星芽短剧",
         "name": "🌟星芽┃短剧",
         "type": 3,
@@ -205,7 +205,7 @@
         "searchable": 1,
         "quickSearch": 0,
         "filterable": 0
-    },
+    }, */
     {
         "key": "星芽",
         "name": "🌟星芽┃短剧",
