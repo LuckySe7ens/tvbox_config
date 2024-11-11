@@ -252,6 +252,57 @@
         "site": "https://duopan.fun"
       }
     },
+    {
+      "key": "我的阿里",
+      "name": "📁文件┃阿里┃资源",
+      "type": 3,
+      "api": "csp_MyAli",
+      "jar": "https://8943.kstore.space/danmu.php",
+      "searchable": 0,
+      "quickSearch": 0,
+      "filterable": 0,
+      "indexs": 0,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt"
+      },
+      "style": {
+        "type": "list"
+      }
+},
+{
+    "key": "我的夸克",
+    "name": "📁文件┃夸克┃资源",
+    "type": 3,
+    "api": "csp_MyQuark",
+    "jar": "https://8943.kstore.space/danmu.php",
+    "searchable": 0,
+    "quickSearch": 0,
+    "filterable": 0,
+    "indexs": 0,
+    "ext": {
+      "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt"
+    },
+    "style": {
+      "type": "list"
+    }
+},
+{
+    "key": "我的UC",
+    "name": "📁文件┃UC┃资源",
+    "type": 3,
+    "api": "csp_MyUc",
+    "jar": "https://8943.kstore.space/danmu.php",
+    "searchable": 0,
+    "quickSearch": 0,
+    "filterable": 0,
+    "indexs": 0,
+    "ext": {
+      "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt"
+    },
+    "style": {
+      "type": "list"
+    }
+},
     /** {
        "key": "4kav",
        "name": "4K-诶喂",
