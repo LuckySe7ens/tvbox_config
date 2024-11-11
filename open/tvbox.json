@@ -16,6 +16,20 @@
        "type": 3,
        "api": "https://8943.kstore.space/live_open.js"
    },
+    {
+      "key": "网盘配置中心",
+      "name": "🚀弹幕┃高级┃设置",
+      "type": 3,
+      "api": "csp_Config",
+      "jar": "https://8943.kstore.space/danmu.php",
+      "searchable": 0,
+      "changeable": 0,
+      "indexs": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      }
+    },
    {
       "key": "jianpian",
       "name": "🐭荐片┃P2P",
@@ -122,7 +136,7 @@
        "type": 3,
        "api": "./nangua_open.js"
    },
-    {
+  /**   {
             "key": "lurenjia",
             "name": "路人甲┃1080P",
             "playerType": 1,
@@ -133,13 +147,13 @@
             "filterable": 1,
             "ext": "http://122.228.85.203:1000/api.php/app/"
         },
-    /** {
+    {
         "key": "gaoqing360",
         "name": "高清360",
         "type": 3,
         "api": "./caiji.js",
         "ext": "http://liu.li0580.com:7785/api.php/provide/vod/"
-   }, */
+   },
     {
           "key": "subaibai",
           "name": "素白【📺】",
@@ -164,7 +178,7 @@
       "filterable": 1,
       "order_num": 0,
       "ext": "https://8943.kstore.space/zhaixing.js"
-    },
+    }, */
     {
       "key": "hipy_js_奇珍异兽[官]",
       "name": "芒果[🥭]|4K",
@@ -190,13 +204,62 @@
       "ext": "https://8943.kstore.space/qq.js"
     },
     {
+      "key":"玩偶",
+      "name":"👽玩偶┃网盘|4K",
+      "type":3,
+      "api":"csp_Wogg",
+      "jar": "https://8943.kstore.space/danmu.php",
+      "searchable":1,
+      "filterable":1,
+      "changeable":1, 
+      "ext": { 
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "wogg": true 
+      },
+      "timeout":30
+    },
+    {
+      "key": "夸克木偶弹幕",
+      "name": "木偶资源┃网盘|4K",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "https://8943.kstore.space/danmu.php",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "site": "http://mogg.top"
+      }
+    },
+    {
+      "key": "蜡笔",
+      "name": "🖍蜡笔资源┃网盘|4K",
+      "type": 3,
+      "api": "csp_Wobg",
+      "jar": "https://8943.kstore.space/danmu.php",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        "token": "http://127.0.0.1:9978/file/TVBox/token.txt",
+        "cookie": "http://127.0.0.1:9978/file/TVBox/quark.txt",
+        "uc_cookie": "http://127.0.0.1:9978/file/TVBox/uc.txt",
+        "site": "https://duopan.fun"
+      }
+    },
+    /** {
        "key": "4kav",
        "name": "4K-诶喂",
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://8943.kstore.space/4kav.js"
    },
-   /** {
+   {
         "key": "星芽短剧",
         "name": "🌟星芽┃短剧",
         "type": 3,
@@ -256,7 +319,7 @@
        "type": 3,
        "api": "./lsq_open.js",
       "ext": "https://8943.kstore.space/lurenjia.js"
-   }, */
+   },
     {
       "key": "4K yuluo",
       "name": "4K 雨落",
@@ -288,7 +351,7 @@
         "name": "兄弟影视",
         "type": 3,
         "api": "./xdys_open.js"
-   },
+   }, */
    {
         "key": "360kan",
         "name": "360影视",
