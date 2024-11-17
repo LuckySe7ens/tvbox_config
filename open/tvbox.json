@@ -1,6 +1,6 @@
 {
-  //"spider": "https://8943.kstore.space/custom_spider.jar",
-  "spider": "https://8943.kstore.space/lsq.jar;md5;340a8a59eee6043fe23a3a0266291541",
+  //"spider": "https://d.kstore.dev/download/8943/custom_spider.jar",
+  "spider": "https://d.kstore.dev/download/8943/lsq.jar;md5;340a8a59eee6043fe23a3a0266291541",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -8,20 +8,20 @@
        "name": "公众号[蹲街捏蚂蚁]免费分享",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/jpyy.js"
+       "ext": "https://d.kstore.dev/download/8943/jpyy.js"
    },
     {
        "key": "live",
        "name": "聚合直播",
        "type": 3,
-       "api": "https://8943.kstore.space/live_open.js"
+       "api": "https://d.kstore.dev/download/8943/live_open.js"
    },
     {
       "key": "网盘配置中心",
       "name": "网盘┃设置",
       "type": 3,
       "api": "csp_Config",
-      "jar": "https://8943.kstore.space/danmu.php",
+      "jar": "https://d.kstore.dev/download/8943/danmu.php",
       "searchable": 0,
       "changeable": 0,
       "indexs": 0,
@@ -58,7 +58,7 @@
        "name": "瓜子影视",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/gzys.js"
+       "ext": "https://d.kstore.dev/download/8943/gzys.js"
    },
    /** {
       "key": "瓜子",
@@ -70,7 +70,7 @@
       "filterable": 1,
       "order_num": 0,
       "changeable": 0,
-      "ext": "https://8943.kstore.space/guazi.js"
+      "ext": "https://d.kstore.dev/download/8943/guazi.js"
     }, */
     {
        "key": "gzys3",
@@ -83,14 +83,14 @@
        "name": "多多追剧",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/ddzj.js"
+       "ext": "https://d.kstore.dev/download/8943/ddzj.js"
    },
     {
        "key": "keke",
        "name": "可可影视",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/keke.js"
+       "ext": "https://d.kstore.dev/download/8943/keke.js"
    },
     {
       "key": "🌟客星",
@@ -112,7 +112,7 @@
        "name": "子子影视",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/zzys.js"
+       "ext": "https://d.kstore.dev/download/8943/zzys.js"
    },
    {
        "key": "slys",
@@ -128,7 +128,7 @@
        "name": "NO视频",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/noys.js"
+       "ext": "https://d.kstore.dev/download/8943/noys.js"
    },
     {
        "key": "ng",
@@ -177,7 +177,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "order_num": 0,
-      "ext": "https://8943.kstore.space/zhaixing.js"
+      "ext": "https://d.kstore.dev/download/8943/zhaixing.js"
     }, */
     {
       "key": "hipy_js_奇珍异兽[官]",
@@ -188,7 +188,7 @@
       "quickSearch": 1,
       "filterable": 1,
       "order_num": 0,
-      "ext": "https://8943.kstore.space/mangguo.js"
+      "ext": "https://d.kstore.dev/download/8943/mangguo.js"
     },
     {
       "key": "hipy_js_腾云驾雾[官]",
@@ -201,14 +201,14 @@
       "filterable": 1,
       "order_num": 0,
       "changeable": 0,
-      "ext": "https://8943.kstore.space/qq.js"
+      "ext": "https://d.kstore.dev/download/8943/qq.js"
     },
     {
       "key":"玩偶",
       "name":"👽玩偶┃网盘|4K",
       "type":3,
       "api":"csp_Wogg",
-      "jar": "https://8943.kstore.space/danmu.php",
+      "jar": "https://d.kstore.dev/download/8943/danmu.php",
       "searchable":1,
       "filterable":1,
       "changeable":1, 
@@ -225,7 +225,7 @@
       "name": "木偶资源┃网盘|4K",
       "type": 3,
       "api": "csp_Wobg",
-      "jar": "https://8943.kstore.space/danmu.php",
+      "jar": "https://d.kstore.dev/download/8943/danmu.php",
       "quickSearch": 1,
       "changeable": 1,
       "filterable": 1,
@@ -241,7 +241,7 @@
       "name": "🖍蜡笔资源┃网盘|4K",
       "type": 3,
       "api": "csp_Wobg",
-      "jar": "https://8943.kstore.space/danmu.php",
+      "jar": "https://d.kstore.dev/download/8943/danmu.php",
       "quickSearch": 1,
       "changeable": 1,
       "filterable": 1,
@@ -256,14 +256,14 @@
        "key": "mito",
        "name": "🐱追剧猫",
        "type": 3,
-       "api": "https://8943.kstore.space/mito_open.js"
+       "api": "https://d.kstore.dev/download/8943/mito_open.js"
    },
     {
       "key": "我的阿里",
       "name": "📁文件┃阿里┃资源",
       "type": 3,
       "api": "csp_MyAli",
-      "jar": "https://8943.kstore.space/danmu.php",
+      "jar": "https://d.kstore.dev/download/8943/danmu.php",
       "searchable": 0,
       "quickSearch": 0,
       "filterable": 0,
@@ -280,7 +280,7 @@
     "name": "📁文件┃夸克┃资源",
     "type": 3,
     "api": "csp_MyQuark",
-    "jar": "https://8943.kstore.space/danmu.php",
+    "jar": "https://d.kstore.dev/download/8943/danmu.php",
     "searchable": 0,
     "quickSearch": 0,
     "filterable": 0,
@@ -297,7 +297,7 @@
     "name": "📁文件┃UC┃资源",
     "type": 3,
     "api": "csp_MyUc",
-    "jar": "https://8943.kstore.space/danmu.php",
+    "jar": "https://d.kstore.dev/download/8943/danmu.php",
     "searchable": 0,
     "quickSearch": 0,
     "filterable": 0,
@@ -314,14 +314,14 @@
        "name": "4K-诶喂",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/4kav.js"
+       "ext": "https://d.kstore.dev/download/8943/4kav.js"
    },
    {
         "key": "星芽短剧",
         "name": "🌟星芽┃短剧",
         "type": 3,
         "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
-        "ext": "https://8943.kstore.space/xingya_duanju.js",
+        "ext": "https://d.kstore.dev/download/8943/xingya_duanju.js",
         "searchable": 1,
         "quickSearch": 0,
         "filterable": 0
@@ -340,49 +340,49 @@
        "name": "无忧┃短剧",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/djw.js"
+       "ext": "https://d.kstore.dev/download/8943/djw.js"
    },
     {
        "key": "ainidj",
        "name": "爱你┃短剧",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/ainidj.js"
+       "ext": "https://d.kstore.dev/download/8943/ainidj.js"
    },
     {
        "key": "djtt",
        "name": "天堂┃短剧",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/djtt.js"
+       "ext": "https://d.kstore.dev/download/8943/djtt.js"
    },
     {
        "key": "leting8",
        "name": "乐听吧┃听书",
        "type": 3,
        "api": "./lsq_open.js",
-       "ext": "https://8943.kstore.space/leting8.js"
+       "ext": "https://d.kstore.dev/download/8943/leting8.js"
    },
  /**   {
        "key": "bulei",
        "name": "4K 布蕾",
        "type": 3,
        "api": "csp_Wexhuaruitv",
-      "jar": "https://8943.kstore.space/wex_mod.jar"
+      "jar": "https://d.kstore.dev/download/8943/wex_mod.jar"
    },
     {
        "key": "lurenjia",
        "name": "4K 路人甲",
        "type": 3,
        "api": "./lsq_open.js",
-      "ext": "https://8943.kstore.space/lurenjia.js"
+      "ext": "https://d.kstore.dev/download/8943/lurenjia.js"
    },
     {
       "key": "4K yuluo",
       "name": "4K 雨落",
       "type": 3,
       "api": "./lsq_open.js",
-      "ext": "https://8943.kstore.space/yuluo.js"
+      "ext": "https://d.kstore.dev/download/8943/yuluo.js"
     },
     {
       "key": "taozi",
@@ -450,14 +450,14 @@
       "name": "jav直播",
       "type": 3,
       "api": "./lsq_open.js",
-      "ext": "https://8943.kstore.space/stripchat_live.js"
+      "ext": "https://d.kstore.dev/download/8943/stripchat_live.js"
     },
    {
       "key": "javsb",
       "name": "javsb",
       "type": 3,
       "api": "./lsq_open.js",
-      "ext": "https://8943.kstore.space/javsb.js"
+      "ext": "https://d.kstore.dev/download/8943/javsb.js"
     },
     {
        "key": "netflixgc",
