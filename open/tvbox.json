@@ -259,6 +259,12 @@
        "api": "https://d.kstore.dev/download/8943/mito_open.js"
    },
     {
+       "key": "wantWatch",
+       "name": "wantWatch",
+       "type": 3,
+       "api": "https://d.kstore.dev/download/8943/wantWatch.js"
+   },
+    {
       "key": "我的阿里",
       "name": "📁文件┃阿里┃资源",
       "type": 3,
