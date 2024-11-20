@@ -1,7 +1,7 @@
 import { load, _ } from 'assets://js/lib/cat.js';
 //发布地址：http://shapp.us/
 let key = 'saohuo';
-let HOST = 'https://saohuo.us';
+let HOST = 'https://saohuo.tv';
 let PARSE_URL = 'https://hhjx.hhplayer.com/api.php';
 var charStr = 'abacdefghjklmnopqrstuvwxyzABCDEFGHJKLMNOPQRSTUVWXYZ0123456789';
 let COOKIE = 'PHPSESSID=' + randStr(26, true);
