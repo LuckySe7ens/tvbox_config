@@ -262,7 +262,8 @@
        "key": "wantWatch",
        "name": "wantWatch",
        "type": 3,
-       "api": "https://d.kstore.dev/download/8943/wantWatch.js"
+       "api": "./lsq_open.js",
+       "ext": "https://d.kstore.dev/download/8943/wantWatch.js"
    },
     {
       "key": "我的阿里",
