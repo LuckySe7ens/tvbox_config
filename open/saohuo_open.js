@@ -178,7 +178,9 @@ async function getRealUrl(link) {
         postType: 'form',
     });
     const video = JSON.parse(res.content);
-    return video.url;
+    let playUrl = video.url;
+    if(playUrl.startsWith('/')) playUrl = 'https://hhjx.hhplayer.com' + playUrl;
+    return playUrl;
 }
 
 async function validCode(url, wd) {
