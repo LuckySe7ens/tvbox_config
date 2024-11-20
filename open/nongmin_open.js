@@ -103,14 +103,19 @@ async function detail(id) {
         let actor = _.map($('.desc_item:eq(1) font a'), (n) => {
             return $(n).text();
         }).join(' ');
-
+        let playFrom = $('.hd > ul > li > a').text();
+        if (playFrom.indexOf('云播') >= 0) {
+            playFrom = '云播';
+        } else {
+            playFrom = 'Leospring';
+        }
         let play1Url = siteUrl + $('.greenBtn').attr('href');
         //('play1Url', play1Url);
         let html2 = await request(play1Url);
         let nameUrls = html2.split("mac_url='")[1].split("';")[0];
         
         const video = {
-            vod_play_from: 'Leospring',
+            vod_play_from: playFrom,
             vod_play_url: nameUrls,
             vod_content: content,
             vod_director: director,
@@ -149,7 +154,12 @@ async function search(wd, quick, pg) {
 
 async function play(flag, id, flags) {
     let playUrl = id;
-    const html = (await req(jxUrl[0] + playUrl, {
+    if (flag === '云播') {
+        playUrl = jxUrl[3] + id;
+    } else {
+        playUrl = jxUrl[0] + id;
+    }
+    const html = (await req(playUrl, {
         method: 'get',
         headers: {
             'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
