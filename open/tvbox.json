@@ -538,6 +538,12 @@
       "quickSearch": 1,
       "changeable": 1
     }, */
+    {
+       "key": "zzmusic",
+       "name": "🎵|zz音乐",
+       "type": 3,
+       "api": "./zzmusic_open.js"
+   },
    {
        "key": "yinyuetai",
        "name": "音悦台",
