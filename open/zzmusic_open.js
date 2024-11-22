@@ -1,6 +1,6 @@
 import { Crypto, load, _ } from './lib/cat.js';
 //代理地址
-let siteUrl = 'https://gh.7761.cf/https://zz123.com';
+let siteUrl = 'https://zz123.com';
 let imgUrl = 'https://music.jsbaidu.com';
 let siteKey = '';
 let siteType = 0;
