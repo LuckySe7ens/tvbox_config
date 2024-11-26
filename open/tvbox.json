@@ -110,6 +110,16 @@
       "ext": "caHR0cHM6Ly9zYzEwODAudG9wfGU1OWQ0NGIyZWVmMDNiYTJ8ZTU5ZDQ0YjJlZWYwM2JhMg==",
       "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732107398295/qj.jar;md5;68959abc51dbfcba14fb08d537dbf230"
     },
+    {
+      "key": "摘星",
+      "name": "摘星",
+      "type": 3,
+      "api": "https://d.kstore.dev/download/8943/zhaixing.js",
+      "searchable": 1,
+      "quickSearch": 1,
+      "filterable": 1,
+      "order_num": 0
+    },
    /** {
        "key": "mqsp",
        "name": "麻雀视频",
