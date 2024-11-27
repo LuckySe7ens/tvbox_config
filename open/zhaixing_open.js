@@ -27,12 +27,12 @@ async function init(cfg) {
     siteType = cfg.stype;
     if (cfg.ext) siteUrl = cfg.ext;
     let url = `${siteUrl}/shark/api.php?action=configs`;
-  	try {
-      let rets = await request(url);
+  try {
+      let rets = await request(url,{},'','POST');
       let data = JSON.parse(aesEcbDecode(rets, 'aassddwwxxllsx1x'));
       keyId = data['config']['hulue'].split('&')[0];
       _.forEach(data['playerinfos'], item => {
-         parseMap[item['playername']] = aesEcbDecode(item['playerjiekou'], keyId);
+	 parseMap[item['playername']] = aesEcbDecode(item['playerjiekou'], keyId);
       });
     } catch(e){
       console.log(e);
@@ -93,7 +93,7 @@ async function category(tid, pg, filter, extend) {
 
 async function detail(id) {
     let url = `${siteUrl}/api.php/v1.player/details?vod_id=${id}`;
-  	let rets = await request(url);
+  	let rets = await request(url,{},'','POST');
 	let info = JSON.parse(aesEcbDecode(rets,'aassddwwxxllsx1x'))['data']['detail'];
     let videos = {
         vod_id: info.vod_id,
