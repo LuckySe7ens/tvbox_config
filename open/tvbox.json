@@ -271,8 +271,8 @@
        "key": "zhaix2",
        "name": "zx2",
        "type": 3,
-       "api": "https://d.kstore.dev/download/8943/mito2_open.js",
-       "ext": "http://103.88.35.251:8989"
+       "api": "https://d.kstore.dev/download/8943/mito2_open.js"
+       //"ext": "http://103.88.35.251:8989"
    },
     {
       "key": "zhaixing",
