@@ -543,7 +543,7 @@
        "api": "./dyxs_open.js"
    },    
    {
-       "key": "ktv",
+       "key": "IKTV🎵|音乐",
        "name": "KTV",
        "type": 3,
        "api": "./ktv_open.js"
@@ -559,13 +559,13 @@
     }, */
     {
        "key": "zzmusic",
-       "name": "🎵|zz音乐",
+       "name": "种子🎵|音乐",
        "type": 3,
        "api": "./zzmusic_open.js"
    },
    {
        "key": "yinyuetai",
-       "name": "音悦台",
+       "name": "音悦台🎵|音乐",
        "type": 3,
        "api": "./yinyuetai_open.js"
    },
@@ -702,36 +702,6 @@
       "playerType": "1",
       "searchable": 0,
       "quickSearch": 1,
-      "changeable": 0
-    },
-    {
-      "key": "虎牙直播js",
-      "name": "🐯虎牙┃直播",
-      "type": 3,
-      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/huya2.js",
-      "style": {
-        "type": "rect",
-        "ratio": 1.755
-      },
-      "playerType": "1",
-      "searchable": 0,
-      "quickSearch": 0,
-      "changeable": 0
-    },
-    {
-      "key": "斗鱼js",
-      "name": "🐟斗鱼┃直播",
-      "type": 3,
-      "api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
-      "ext": "https://gitlab.com/fantaiying/ext/-/raw/main/斗鱼直播.js",
-      "style": {
-        "type": "rect",
-        "ratio": 1.755
-      },
-      "playerType": "1",
-      "searchable": 0,
-      "quickSearch": 0,
       "changeable": 0
     },
     {
