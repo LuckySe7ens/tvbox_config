@@ -29,24 +29,26 @@ async function init(cfg) {
 }
 
 async function home(filter) {
+    let classes = [];
+    classes.push({ type_id: 'tuijian', type_name: '推荐' });
     const html = await request(siteUrl);
     const $ = load(html);
     const cates = $('ul.aside-menu-list.channel > li')
-    let classes = _.map(cates, (n) => {
+    _.forEach(cates, (n) => {
         let id = n.attribs['data-id'];
         let name = $($(n).find('a > span')[0]).text();
-        return {
+        classes.push({
             type_id: id,
             type_name: name
-        };
+        });
     });
     return JSON.stringify({
         class: classes
     });
 }
 
-async function homeVod() {
-    const html = await request(siteUrl);
+async function cateVod(id) {
+    const html = await request(siteUrl + '/list/' + id + '.htm');
     const $ = load(html);
     const cards = $('div.page-main-wrap > div > div > div.card-list.d-none.d-md-block > div');
     let videos = _.map(cards, (n) => {
@@ -62,41 +64,45 @@ async function homeVod() {
         };
     });
     return JSON.stringify({
-        list: videos
+        list: videos,
+        pagecount: 1,
     });
 }
 
 async function category(tid, pg, filter, extend) {
     if (pg <= 0) pg = 1;
-    pg++;
-    let url = siteUrl + '/ajax/';
-    let res = await req(url, {
-        method: 'post',
-        data: {
-            act: 'tag_music',
-            type: 'tuijian',
-            tid: tid,
-            page: pg,
-            lang: ''
-        },
-        postType: 'form'
-    });
-    //console.log('catedata:', res);
-    let data = JSON.parse(res.content).data;
-    let videos = [];
-    for(let i=0;i<data.length;i++){
-        const item = data[i];
-        videos.push({
-            vod_id: item['mp3'],
-            vod_name: item['mname'],
-            vod_pic: item['pic'].replace('/img', imgUrl),
-            vod_remarks: item['sname'],
-            vod_year: item['play_time']
-        })
+    if (tid == 'tuijian') {
+        let url = siteUrl + '/ajax/';
+        let res = await req(url, {
+            method: 'post',
+            data: {
+                act: 'tag_music',
+                type: 'tuijian',
+                tid: 'qdk',
+                page: pg,
+                lang: ''
+            },
+            postType: 'form'
+        });
+        //console.log('catedata:', res);
+        let data = JSON.parse(res.content).data;
+        let videos = [];
+        for(let i=0;i<data.length;i++){
+            const item = data[i];
+            videos.push({
+                vod_id: item['mp3'],
+                vod_name: item['mname'],
+                vod_pic: item['pic'].replace('/img', imgUrl),
+                vod_remarks: item['sname'],
+                vod_year: item['play_time']
+            })
+        }
+        return JSON.stringify({
+            list: videos
+        });
+    } else {
+        return await cateVod(tid);
     }
-    return JSON.stringify({
-        list: videos
-    });
 }
 
 async function detail(id) {
@@ -120,7 +126,7 @@ async function detail(id) {
                 vod_actor: data.sname,
                 vod_pic: data.pic,
                 vod_play_from: 'Leospring',
-                vod_play_url: '播放$' + playUrl,
+                vod_play_url: '播放$' + data.mp3,
                 vod_director: 'Leospring',
                 vod_content: '该音乐由公众号【蹲街捏蚂蚁】用爱发电制作，欢迎收听！\r\n' + data.lrc,
             };
@@ -168,7 +174,6 @@ export function __jsEvalReturn() {
     return {
         init: init,
         home: home,
-        homeVod: homeVod,
         category: category,
         detail: detail,
         play: play,
