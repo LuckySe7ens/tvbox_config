@@ -1,6 +1,6 @@
 {
   //"spider": "https://d.kstore.dev/download/8943/custom_spider.jar",
-  "spider": "https://d.kstore.dev/download/8943/lsq.jar;md5;340a8a59eee6043fe23a3a0266291541",
+  "spider": "https://d.kstore.dev/download/8943/lsq1128.jar;md5;1893c0bdc1c5fd5bd79b2e66b39f80b2",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -265,21 +265,17 @@
        "key": "mito",
        "name": "🐱追剧猫",
        "type": 3,
-       "api": "https://d.kstore.dev/download/8943/mito_open.js"
+       "api": "csp_Mito",
+       "ext": "http://mito.minotv.cn"
+       //"api": "https://d.kstore.dev/download/8943/mito_open.js"
    },
     {
        "key": "zhaix2",
        "name": "zx2",
        "type": 3,
-       "api": "./zhaixing_open.js",
+       "api": "csp_Mito",
        "ext": "http://103.88.35.251:8989"
    },
-    {
-      "key": "zhaixing",
-      "name": "摘星",
-      "type": 3,
-      "api": "https://d.kstore.dev/download/8943/zhaixing_open.js"
-    },
     {
        "key": "wantWatch",
        "name": "wantWatch",
