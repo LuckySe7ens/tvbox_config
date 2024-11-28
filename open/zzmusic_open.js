@@ -1,5 +1,6 @@
 import { Crypto, load, _ } from './lib/cat.js';
 //代理地址
+//let siteUrl = 'https://gh.7761.cf/https://zz123.com';
 let siteUrl = 'https://zz123.com';
 let imgUrl = 'https://music.jsbaidu.com';
 let siteKey = '';
@@ -67,6 +68,7 @@ async function homeVod() {
 
 async function category(tid, pg, filter, extend) {
     if (pg <= 0) pg = 1;
+    pg++;
     let url = siteUrl + '/ajax/';
     let res = await req(url, {
         method: 'post',
@@ -88,7 +90,8 @@ async function category(tid, pg, filter, extend) {
             vod_id: item['mp3'],
             vod_name: item['mname'],
             vod_pic: item['pic'].replace('/img', imgUrl),
-            vod_remarks: item['play_time']
+            vod_remarks: item['sname'],
+            vod_year: item['play_time']
         })
     }
     return JSON.stringify({
@@ -99,11 +102,7 @@ async function category(tid, pg, filter, extend) {
 async function detail(id) {
     try {
         let playUrl = id;
-        if(!id.startsWith('http')) {
-            playUrl = siteUrl + '/xplay/?act=songplay&id=' + id;
-        }
-
-        const video = {
+        let video = {
             vod_id: id,
             vod_actor: 'Leospring',
             vod_play_from: 'Leospring',
@@ -111,6 +110,22 @@ async function detail(id) {
             vod_director: 'Leospring',
             vod_content: '该音乐由公众号【蚂蚁科技杂谈】用爱发电制作，欢迎收听！',
         };
+        if(!id.startsWith('http')) {
+            let data = JSON.parse(await request(siteUrl + '/ajax/', {act:'songinfo',id:id,lang:''},'', false)).data;
+            //console.log('data', data);
+            //playUrl = JSON.parse(data).data.mp3;
+            video = {
+                vod_id: id,
+                vod_name: data.mname,
+                vod_actor: data.sname,
+                vod_pic: data.pic,
+                vod_play_from: 'Leospring',
+                vod_play_url: '播放$' + playUrl,
+                vod_director: 'Leospring',
+                vod_content: '该音乐由公众号【蹲街捏蚂蚁】用爱发电制作，欢迎收听！\r\n' + data.lrc,
+            };
+        }
+
         const list = [video];
         const result = { list };
         return JSON.stringify(result);
@@ -160,4 +175,3 @@ export function __jsEvalReturn() {
         search: search,
     };
 }
-
