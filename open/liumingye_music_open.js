@@ -162,8 +162,8 @@ function base64Decode(text) {
     return Crypto.enc.Utf8.stringify(Crypto.enc.Base64.parse(text));
 }
 
-const Es = "pW8jg/mke6cO1F4CTuaiswhZfQGzMyq5NJRLPVIvDxlA7=E3YrSUoH0b2BXKn9td+";
-const t= 'yGz4n9XE9xYy2Oj5Ub7E6u9a5p5aIWZYe53Orq5wE5UgnjbWq0410WTvmLBO1Z2N';
+const Es = "mLIXG/KZejUbq85HWdvlVtpAFrQsR0ciYEDPJwn321zu4=ToxygSM67OkafC9hNB+";
+const t= 'xeLO3Wq54bYyE5q59B1WU0ju26bg5GzZTr7wN40aOYOEZEy9IWm9XU51an5nv2jp';
 function Bs(ee){
 	let f=0,h='';
 	do{
@@ -190,7 +190,7 @@ function genToken(data) {
     for(let i=0;i<res.length;i++) {
         arr[i] = res.charCodeAt(i) ^ t.charCodeAt(i%64);
     }
-    return '20230327.' + md5X(Bs(arr));
+    return '20241016.' + md5X(Bs(arr));
 }
 
 function getMp3(musicId) {
