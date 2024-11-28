@@ -1,6 +1,6 @@
 {
   //"spider": "https://d.kstore.dev/download/8943/custom_spider.jar",
-  "spider": "https://d.kstore.dev/download/8943/lsq1128.jar;md5;1893c0bdc1c5fd5bd79b2e66b39f80b2",
+  "spider": "https://d.kstore.dev/download/8943/lsq1128.jar;md5;0763797b903252abbb307c2212dbce72",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -79,18 +79,19 @@
        "api": "csp_Guazi"
    },
     {
-       "key": "ddjz",
-       "name": "多多追剧",
+       "key": "mito",
+       "name": "🐱追剧猫",
        "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://d.kstore.dev/download/8943/ddzj.js"
+       "api": "csp_Mito",
+       "ext": "http://mito.minotv.cn"
+       //"api": "https://d.kstore.dev/download/8943/mito_open.js"
    },
     {
-       "key": "keke",
-       "name": "可可影视",
+       "key": "zhaixing",
+       "name": "摘星",
        "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://d.kstore.dev/download/8943/keke.js"
+       "api": "csp_Mito",
+       "ext": "http://103.88.35.251:8989"
    },
     {
       "key": "天天",
@@ -110,6 +111,36 @@
       "ext": "caHR0cHM6Ly9zYzEwODAudG9wfGU1OWQ0NGIyZWVmMDNiYTJ8ZTU5ZDQ0YjJlZWYwM2JhMg==",
       "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732107398295/qj.jar;md5;68959abc51dbfcba14fb08d537dbf230"
     },
+     {
+       "key": "ng",
+       "name": "南瓜影视",
+       "type": 3,
+       "api": "./nangua_open.js"
+   },
+    {
+       "key": "slys",
+       "name": "闪雷电影院",
+       "type": 3,
+       "api": "csp_Shanlei",
+       //"ext": "http://36.56.71.104:18008"
+       "ext": "http://120.224.7.90:808"
+     
+   },
+    {
+       "key": "ddjz",
+       "name": "多多追剧",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://d.kstore.dev/download/8943/ddzj.js"
+   },
+    {
+       "key": "keke",
+       "name": "可可影视",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://d.kstore.dev/download/8943/keke.js"
+   },
+    
    /** {
        "key": "mqsp",
        "name": "麻雀视频",
@@ -123,27 +154,12 @@
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/zzys.js"
    },
-   {
-       "key": "slys",
-       "name": "闪雷电影院",
-       "type": 3,
-       "api": "csp_Shanlei",
-       //"ext": "http://36.56.71.104:18008"
-       "ext": "http://120.224.7.90:808"
-     
-   },
     {
        "key": "noys",
        "name": "NO视频",
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/noys.js"
-   },
-    {
-       "key": "ng",
-       "name": "南瓜影视",
-       "type": 3,
-       "api": "./nangua_open.js"
    },
   /**   {
             "key": "lurenjia",
@@ -261,21 +277,6 @@
         "site": "https://duopan.fun"
       }
     },
-    {
-       "key": "mito",
-       "name": "🐱追剧猫",
-       "type": 3,
-       "api": "csp_Mito",
-       "ext": "http://mito.minotv.cn"
-       //"api": "https://d.kstore.dev/download/8943/mito_open.js"
-   },
-    {
-       "key": "zhaix2",
-       "name": "zx2",
-       "type": 3,
-       "api": "csp_Mito",
-       "ext": "http://103.88.35.251:8989"
-   },
     {
        "key": "wantWatch",
        "name": "wantWatch",
