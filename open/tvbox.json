@@ -1,6 +1,6 @@
 {
   //"spider": "https://d.kstore.dev/download/8943/custom_spider.jar",
-  "spider": "https://d.kstore.dev/download/8943/lsq1128.jar;md5;0763797b903252abbb307c2212dbce72",
+  "spider": "https://d.kstore.dev/download/8943/lsq1130.jar;md5;d4198bc40977bba05e720832eff127c2",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
@@ -91,7 +91,7 @@
        "name": "🐱追剧猫",
        "type": 3,
        "api": "csp_Mito",
-       "ext": "http://mito.minotv.cn"
+       "ext": "http://mito.minotv.cn|1.1.0"
        //"api": "https://d.kstore.dev/download/8943/mito_open.js"
    },
     {
@@ -99,7 +99,7 @@
        "name": "摘星",
        "type": 3,
        "api": "csp_Mito",
-       "ext": "http://103.88.35.251:8989"
+       "ext": "http://103.88.35.251:8989|1.6.0"
    },
     {
       "key": "天天",
