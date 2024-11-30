@@ -99,6 +99,12 @@
       "jar": "https://fs-im-kefu.7moor-fs1.com/ly/4d2c3f00-7d4c-11e5-af15-41bf63ae4ea0/1732107398295/qj.jar;md5;68959abc51dbfcba14fb08d537dbf230"
     },
     {
+       "key": "ky1080",
+       "name": "酷云",
+       "type": 3,
+       "api": "https://d.kstore.dev/download/8943/ky_open.js"
+   },
+    {
       "key": "🌟客星",
       "name": "🌟客星┃1080P",
       "type": 3,
