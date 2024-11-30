@@ -60,18 +60,6 @@
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/gzys.js"
    },
-   /** {
-      "key": "瓜子",
-      "name": "瓜子2",
-      "type": 3,
-      "api": "https://cdn.gitmirror.com/gl/leospring1/leo/main/drpy.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "order_num": 0,
-      "changeable": 0,
-      "ext": "https://d.kstore.dev/download/8943/guazi.js"
-    }, */
     {
        "key": "gzys3",
        "name": "瓜子2",
@@ -169,24 +157,7 @@
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/noys.js"
    },
-  /**   {
-            "key": "lurenjia",
-            "name": "路人甲┃1080P",
-            "playerType": 1,
-            "type": 3,
-            "api": "csp_AppYsV2",
-            "searchable": 1,
-            "quickSearch": 1,
-            "filterable": 1,
-            "ext": "http://122.228.85.203:1000/api.php/app/"
-        },
-    {
-        "key": "gaoqing360",
-        "name": "高清360",
-        "type": 3,
-        "api": "./caiji.js",
-        "ext": "http://liu.li0580.com:7785/api.php/provide/vod/"
-   },
+  /** 
     {
           "key": "subaibai",
           "name": "素白【📺】",
@@ -198,20 +169,7 @@
         "name": "在家【📺】",
         "type": 3,
         "api": "./zxzj_open.js"
-   },
-    {
-      "key": "摘星",
-      "name": "摘星",
-      "type": 3,
-      "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
-      //"api":"http://我不是.摸鱼儿.top/json/js/drpy.min.js",
-      //"api": "https://gitlab.com/fantaiying/ext/-/raw/main/drpy2.min.js",
-      "searchable": 1,
-      "quickSearch": 1,
-      "filterable": 1,
-      "order_num": 0,
-      "ext": "https://d.kstore.dev/download/8943/zhaixing.js"
-    }, */
+   },*/
     {
       "key": "hipy_js_奇珍异兽[官]",
       "name": "芒果[🥭]|4K",
@@ -349,17 +307,7 @@
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/4kav.js"
-   },
-   {
-        "key": "星芽短剧",
-        "name": "🌟星芽┃短剧",
-        "type": 3,
-        "api": "http://193.134.211.100:1888/tv/ijia/4kk/lib/drpy2.min.js",
-        "ext": "https://d.kstore.dev/download/8943/xingya_duanju.js",
-        "searchable": 1,
-        "quickSearch": 0,
-        "filterable": 0
-    }, */
+   },*/
     {
         "key": "星芽",
         "name": "🌟星芽┃短剧",
@@ -397,27 +345,7 @@
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/leting8.js"
    },
- /**   {
-       "key": "bulei",
-       "name": "4K 布蕾",
-       "type": 3,
-       "api": "csp_Wexhuaruitv",
-      "jar": "https://d.kstore.dev/download/8943/wex_mod.jar"
-   },
-    {
-       "key": "lurenjia",
-       "name": "4K 路人甲",
-       "type": 3,
-       "api": "./lsq_open.js",
-      "ext": "https://d.kstore.dev/download/8943/lurenjia.js"
-   },
-    {
-      "key": "4K yuluo",
-      "name": "4K 雨落",
-      "type": 3,
-      "api": "./lsq_open.js",
-      "ext": "https://d.kstore.dev/download/8943/yuluo.js"
-    },
+ /** 
     {
       "key": "taozi",
       "name": "4K 🍑",
@@ -537,19 +465,6 @@
        "type": 3,
        "api": "./360ba_open.js"
    }, 
-   {
-       "key": "kan80",
-       "name": "kan80",
-       "type": 3,
-       "api": "./lsq_open.js",
-       "ext": "https://152.32.170.60/564892076/box/raw/branch/main/js/cat/rules/test.rule"
-   },  
-   {
-       "key": "dyxs",
-       "name": "电影先生",
-       "type": 3,
-       "api": "./dyxs_open.js"
-   },    
    {
        "key": "KTV",
        "name": "IKTV🎵|音乐",
