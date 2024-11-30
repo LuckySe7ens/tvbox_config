@@ -79,6 +79,14 @@
        "api": "csp_Guazi"
    },
     {
+       "key": "xiafan",
+       "name": "下饭剧",
+       "type": 3,
+       "api": "csp_Mito",
+       "ext": "http://xiafan.zhuiju666.com"
+       //"api": "https://d.kstore.dev/download/8943/mito_open.js"
+   },
+    {
        "key": "mito",
        "name": "🐱追剧猫",
        "type": 3,
@@ -543,8 +551,8 @@
        "api": "./dyxs_open.js"
    },    
    {
-       "key": "IKTV🎵|音乐",
-       "name": "KTV",
+       "key": "KTV",
+       "name": "IKTV🎵|音乐",
        "type": 3,
        "api": "./ktv_open.js"
    },
@@ -571,7 +579,7 @@
    },
    {
        "key": "music",
-       "name": "music",
+       "name": "liumingye🎵|音乐",
        "type": 3,
        "api": "./liumingye_music_open.js"
    },
