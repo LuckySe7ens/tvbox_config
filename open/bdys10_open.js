@@ -1,6 +1,7 @@
 import { Crypto, load, _, html } from './lib/cat.js';
 
-let siteUrl ='https://www.yjys01.com';
+//let siteUrl ='https://www.yjys01.com';
+let siteUrl = 'https://www.xlys01.com';
 let siteKey = '';
 let siteType = 0;
 let headers = {
@@ -177,7 +178,7 @@ async function play(flag, id, flags) {
         method: 'get',
         headers: headers,
     })
-    playUrl = JSON.parse(res.content).data.url3;
+    playUrl = JSON.parse(res.content).data.url3.split(',')[0];
     //console.log('url', res.content);
     return JSON.stringify({
         parse: 0,
