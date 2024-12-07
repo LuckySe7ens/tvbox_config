@@ -106,10 +106,16 @@
    },
     {
        "key": "tvyb",
-       "name": "YVB云播",
+       "name": "TVB云播",
        "type": 3,
        "api": "https://d.kstore.dev/download/8943/ky_open.js",
        "ext": "http://getapp.tvybapp.com|mick2458mick2458|mick2458mick2458"
+   },
+    {
+       "key": "ydpan",
+       "name": "YD盘",
+       "type": 3,
+       "api": "https://d.kstore.dev/download/8943/ydpan.js"
    },
     {
       "key": "🌟客星",
