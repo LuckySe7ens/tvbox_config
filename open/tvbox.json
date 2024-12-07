@@ -115,7 +115,7 @@
        "key": "ydpan",
        "name": "YD盘",
        "type": 3,
-       "api": "https://d.kstore.dev/download/8943/ydpan.js"
+       "api": "./ydpan.js"
    },
     {
       "key": "🌟客星",
