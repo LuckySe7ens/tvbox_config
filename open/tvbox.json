@@ -136,6 +136,13 @@
      
    },
     {
+       "key": "duboku",
+       "name": "独播库",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "./duboku.js"
+   },
+    {
        "key": "ddjz",
        "name": "多多追剧",
        "type": 3,
