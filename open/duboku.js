@@ -6,7 +6,7 @@ rule = {
     url: '/vodtype/fyclass-fypage.html',
     categoryVod: '.myui-vodlist__box > a;&&title;&&href;&&data-original;span.text-right&&Text',
     detailVodJS: `
-      request('https://duboku.xoxoys.eu.org/vod?ids=' + input.split('/')[2].split('.')[1]);|||
+      request('https://duboku.xoxoys.eu.org/vod?ids=' + input.split('/')[2].split('.')[0]);|||
       videos = JSON.parse(html).list;
     `,
     lazy: `
