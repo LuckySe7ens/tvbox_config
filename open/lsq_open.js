@@ -65,6 +65,7 @@ async function init(cfg) {
         html = await request(HOST);
         if (html.indexOf('document.cookie = ')  > 0) {
             COOKIE = html.match(/document.cookie = "(.*?)"/)[1];
+            headers.Cookie = COOKIE;
             //console.log('cookie', COOKIE);
             html = await request(HOST);
         }
@@ -72,13 +73,13 @@ async function init(cfg) {
     //await parseHost();//解析HOST主页地址
 }
 
-async function parseRule(ext) {
+async function parseRule(json) {
     let ruleText = '';
-    if(typeof(ext) == 'string' && ext.startsWith('http')) {
-        ruleText = await request(ext);
+    if(typeof(json) == 'string' && json.startsWith('http')) {
+        ruleText = await request(json);
         eval(ruleText);        
     } else {
-        rule = ext;
+        rule = json;
     }
     //console.log('rule', rule);
     await parseHost();
@@ -97,16 +98,9 @@ async function parseHost() {
         Object.assign(headers, rule.headers);
     } 
     if(rule.timeout) timeout = rule.timeout;
-    const initParse = rule.initJs || rule.hostJs;
+    const initParse = rule.initJS || rule.hostJS;
      if(initParse) {       
-        const split = initParse.split('||');
-        for(let i = 0; i < split.length; i++) {
-            if(split[i].indexOf('request(') >= 0) {
-                html = await eval(split[i]);
-            } else {
-                eval(split[i]);
-            }
-        }
+        await evalCustomerJs(initParse);
     }
     //console.log('HOST', HOST);
 }
@@ -232,6 +226,7 @@ async function homeVod() {
     videos = [];
     const vodParse = rule.homeVod || rule.推荐;
     const vodParseJS = rule.homeVodJS || rule.推荐JS;
+    const js2Base = await js2Proxy(true, siteType, siteKey, 'img/', {});
     if (vodParse) {
         let url = HOST;
         if(rule.homeUrl && rule.homeUrl.startsWith('/')) {
@@ -240,7 +235,7 @@ async function homeVod() {
             url = rule.homeUrl;
         }
         const $ = load(await request(url));
-        videos = getVideoByCssParse($, vodParse);
+        videos = getVideoByCssParse($, vodParse, js2Base);
         return JSON.stringify({
             list: videos,
         });
@@ -252,7 +247,7 @@ async function homeVod() {
     }
 }
 
-function getVideoByCssParse($, cssParse) {
+function getVideoByCssParse($, cssParse, proxyUrl) {
     let videos = [];
     const split = cssParse.split(';');
     _.forEach($(split[0]), item => {
@@ -262,7 +257,7 @@ function getVideoByCssParse($, cssParse) {
             if(rule.picHost) pic = rule.picHost + pic;
             if(pic.startsWith('/')) pic = HOST + pic;
             if(rule.picSuffix) pic = pic + rule.picSuffix;
-        
+            if(rule.proxyHeader && proxyUrl) pic = proxyUrl + base64Encode(pic);
             videos.push({
                 vod_id: vod_id,
                 vod_name: getCssVal($, item, split[1]),
@@ -280,8 +275,9 @@ async function category(tid, pg, filter, extend) {
     classId = tid;
     ext = extend;
     page = pg;
+    const js2Base = await js2Proxy(true, siteType, siteKey, 'img/', {});
     if(rule.url) {
-        let url = rule.url.replaceAll('fypage', page).replaceAll('fyclass', tid);
+        let url = rule.url.replaceAll('fypage', page).replaceAll('fyclass', tid).replace('{{area}}', extend.area||'').replace('{{lang}}', extend.lang||'').replace('{{year}}', extend.year||'').replace('{{class}}', extend.class||'');
         if (!url.startsWith('http')) {
             url = HOST + url;
         }
@@ -300,7 +296,7 @@ async function category(tid, pg, filter, extend) {
         const vodParse = rule.一级 || rule.categoryVod;
         if (vodParse) {
             const $ = load(html);
-            videos = getVideoByCssParse($, vodParse);
+            videos = getVideoByCssParse($, vodParse, js2Base);
             return JSON.stringify({
                 list: videos,
                 filters: filterObj,
@@ -354,7 +350,7 @@ async function detail(id) {
                 vod.vod_remarks = getCssVal($, '', parse['remarks']);
             }
             if(parse['content']) {
-                vod.vod_content = '关注公众号【蹲街捏蚂蚁】\r\n' + getCssVal($, '', parse['content']);
+                vod.vod_content = getCssVal($, '', parse['content']);
             }
             if (parse['type_name']) {
                 vod.type_name = getCssValArray($, '', parse['type_name']).join('/');
@@ -380,9 +376,6 @@ async function detail(id) {
                     });
                 });
                 vod.vod_play_from = _.keys(playMap).join('$$$');
-                let idx = vod.vod_play_from.indexOf('$$$');
-                if(idx == -1) {vod.vod_play_from = '公众号【蹲街捏蚂蚁】'}
-                else {vod.vod_play_from = '公众号【蹲街捏蚂蚁】'+ vod.vod_play_from.substr(idx);}
                 const urls = _.values(playMap);
                 const vod_play_url = _.map(urls, (urlist) => {
                     return urlist.join('#');
@@ -472,6 +465,9 @@ function getPlay4aJson(html) {
 function base64Decode(text) {
     return Crypto.enc.Utf8.stringify(Crypto.enc.Base64.parse(text));
 }
+function base64Encode(text) {
+    return Crypto.enc.Base64.stringify(Crypto.enc.Utf8.parse(text));
+}
  //aes加密
  function aesEncode(str, keyStr, ivStr, type) {
     const key = Crypto.enc.Utf8.parse(keyStr);
@@ -515,6 +511,7 @@ async function search(wd, quick, pg) {
     try{
         videos = [];
         input = wd;
+        const js2Base = await js2Proxy(true, siteType, siteKey, 'img/', {});
         if (!pg) pg = '';
         let url = '/search.php?searchword=' + wd;
         if(rule.searchUrl) url = rule.searchUrl;
@@ -528,7 +525,7 @@ async function search(wd, quick, pg) {
             let html = await request(url);
             //按css选择器组装数据
             const $ = load(html);
-            videos = getVideoByCssParse($, rule.searchVod)
+            videos = getVideoByCssParse($, rule.searchVod, js2Base)
         }
         return JSON.stringify({
             list: videos,
@@ -621,14 +618,39 @@ function sleep(ms) {
 async function evalCustomerJs(jsCode) {
     const split = jsCode.split('|||');
     for(let i = 0; i < split.length; i++) {
-        if(split[i].indexOf('request(') >= 0) {
+        if(split[i].indexOf('request(') >= 0 || split[i].indexOf('req(') >= 0) {
+            //console.log(split[i]);
             html = await eval(split[i]);
         } else {
+            //console.log('split[i]', split[i]);
             eval(split[i]);
         }
     }
 }
 
+async function proxy(segments, headers) {
+    let what = segments[0];
+    let url = base64Decode(segments[1]);
+    if (what == 'img') {
+        var resp = await req(url, {
+            buffer: 2,
+            headers: {
+                Referer: rule.proxyHeader,
+                'User-Agent': PC_UA,
+            },
+        });
+        return JSON.stringify({
+            code: resp.code,
+            buffer: 2,
+            content: resp.content,
+            headers: resp.headers,
+        });
+    }
+    return JSON.stringify({
+        code: 500,
+        content: '',
+    });
+}
 
 export function __jsEvalReturn() {
     return {
@@ -640,5 +662,6 @@ export function __jsEvalReturn() {
         play: play,
         search: search,
         validCode: validCode,
+        proxy: proxy,
     };
 }
