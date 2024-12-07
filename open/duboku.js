@@ -4,7 +4,7 @@ rule = {
     class_name: '电视剧&电影&综艺&动漫&港剧',
     class_url: '2&1&3&4&20',
     url: '/vodtype/fyclass-fypage.html',
-    picSuffix: '@Referer=https://tv.gboku.com/',
+    proxyHeader: {'Referer':'https://tv.gboku.com/'},
     categoryVod: '.myui-vodlist__box > a;&&title;&&href;&&data-original;span.text-right&&Text',
     detailVodJS: `
       request('https://duboku.xoxoys.eu.org/vod?ids=' + input.split('/')[2].split('.')[0]);|||
