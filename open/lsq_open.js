@@ -261,6 +261,8 @@ function getVideoByCssParse($, cssParse) {
             let pic = getCssVal($, item, split[3]);
             if(rule.picHost) pic = rule.picHost + pic;
             if(pic.startsWith('/')) pic = HOST + pic;
+            if(rule.picSuffix) pic = pic + rule.picSuffix;
+        
             videos.push({
                 vod_id: vod_id,
                 vod_name: getCssVal($, item, split[1]),
