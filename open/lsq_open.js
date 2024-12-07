@@ -634,10 +634,7 @@ async function proxy(segments, headers) {
     if (what == 'img') {
         var resp = await req(url, {
             buffer: 2,
-            headers: {
-                Referer: rule.proxyHeader,
-                'User-Agent': PC_UA,
-            },
+            headers: rule.proxyHeader,
         });
         return JSON.stringify({
             code: resp.code,
