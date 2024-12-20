@@ -3,16 +3,16 @@ import { Crypto, load, _ } from './lib/cat.js';
 //let siteUrl = 'https://m.xiangdao.me';
 //let siteUrl ='https://v.nmvod.cn';
 //let siteUrl = 'https://wwgz.cn';
-let siteUrl = 'https://nmvod.cnmcom.com';
+let siteUrl = 'https://www.wwgz.cn';
 let siteKey = '';
 let siteType = 0;
 let headers = {
     'User-Agent': 'Mozilla/5.0 (iPhone; CPU iPhone OS 13_2_3 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/13.0.3 Mobile/15E148 Safari/604.1',
     'Referer': siteUrl + '/'
 };
-let PARSE_URL = 'https://api.cnmcom.com/webcloud/relay.php';
+let PARSE_URL = 'https://vip.wwgz.cn:5200/nmplay/webcloud/relay.php';
 
-let jxUrl = ['https://api.cnmcom.com/webcloud/nma.php?url=','https://api.cnmcom.com/webcloud/nmb.php?url=', 'https://api.cnmcom.com/webcloud/nmc.php?vid=', 'https://api.cnmcom.com/webcloud/m3u8.php?url='];
+let jxUrl = ['https://api.cnmcom.com/webcloud/nma.php?url=','https://api.cnmcom.com/webcloud/nmb.php?url=', 'https://api.cnmcom.com/webcloud/nmc.php?vid=', 'https://vip.wwgz.cn:5200/nmplay/webcloud/m3u8.php?url='];
 async function request(reqUrl, postData, post) {
 
     let res = await req(reqUrl, {
@@ -70,7 +70,7 @@ async function home(filter) {
 
 async function homeVod() {
     let url = siteUrl;
-    let videos = await getRecommend(url);
+    let videos = await getVideos(url);
     return JSON.stringify({
         list: videos,
     });
@@ -236,7 +236,7 @@ async function getVideos(url) {
         let id = $($(n).find('a')[0]).attr('href');
         let name = $($(n).find('a')[0]).attr('title');
         let pic = $($(n).find('img')[0]).attr('src');
-        let remarks = $($(n).find('font')[0]).text().trim();
+        let remarks = $(n).find('span.sBottom').text().trim();
         return {
             vod_id: id,
             vod_name: name,
