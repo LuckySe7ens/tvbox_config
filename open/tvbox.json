@@ -67,6 +67,31 @@
        "api": "csp_Guazi"
    },
     {
+       "key": "ydpan",
+       "name": "YD盘|4K",
+       "type": 3,
+       "api": "https://d.kstore.dev/download/8943/ydpan.js"
+   },
+   {
+   "key": "leijing",
+   "name": "TY盘|4K",
+   "type": 3,
+   "api": "https://d.kstore.dev/download/8943/js/leijing.js"
+   },
+   {
+   "key": "shijue",
+   "name": "视觉",
+   "type": 3,
+   "api": "https://d.kstore.dev/download/8943/js/shijue_open.js"
+   },
+   {
+       "key": "ppxys",
+       "name": "皮皮虾|4K",
+       "type": 3,
+       "api": "./lsq_open.js",
+       "ext": "https://d.kstore.dev/download/8943/js/ppxys.js"
+   },
+    {
        "key": "xiafan",
        "name": "下饭剧",
        "type": 3,
