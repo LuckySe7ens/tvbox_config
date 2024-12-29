@@ -1056,16 +1056,24 @@
   ],
   "lives": [
     {
-      "name":"【蹲街捏蚂蚁】",
-      "api":"http://rihou.cc:555/qtsd",
-      "type":0,
-      "ua":"okhttp/4.12.0"
+      "name": "央视-卫视直播",
+      "url": "http://127.0.0.1:35345/tv.m3u"
     },
     {
-      "name": "IPV6",
-      "type": 0,
-      "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
-      "playerType": 1
+      "name": "虎牙一起看",
+      "url": "http://127.0.0.1:35345/huyayqk.m3u?url=http://127.0.0.1:35345"
+    },
+    {
+      "name": "B站直播",
+      "url": "http://127.0.0.1:35345/bililive.m3u?url=http://127.0.0.1:35345"
+    },
+    {
+      "name": "斗鱼一起看",
+      "url": "http://127.0.0.1:35345/douyuyqk.m3u?url=http://127.0.0.1:35345"
+    },
+    {
+      "name": "YY轮播",
+      "url": "http://127.0.0.1:35345/yylunbo.m3u?url=http://127.0.0.1:35345"
     }
   ]
 }
