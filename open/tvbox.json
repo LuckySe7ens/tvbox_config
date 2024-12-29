@@ -1,11 +1,16 @@
 {
-  //"spider": "https://d.kstore.dev/download/8943/custom_spider.jar",
-  "spider": "https://d.kstore.dev/download/8943/file/lsq1220.jar;md5;14e5127c059d3283c53e187fb3f9cd13",
+  "spider": "https://d.kstore.dev/download/8943/file/lsq_open.jar;md5;51ed2e46190a0137ab7e78e58788d31a",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
-       "key": "jpyy",
+       "key": "gzys3",
        "name": "公众号[蹲街捏蚂蚁]免费分享",
+       "type": 3,
+       "api": "csp_Guazi"
+   },
+    {
+       "key": "jpyy",
+       "name": "金牌影视",
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/jpyy.js"
