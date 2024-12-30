@@ -1,20 +1,20 @@
 {
-  "spider": "https://d.kstore.dev/download/8943/file/lsq_open.jar;md5;d95aca20dc96c0653dc1f7ee3299a413",
+  "spider": "https://d.kstore.dev/download/8943/file/lsq_open.jar;md5;4286e1b369e8a2b384abbff91dfc9d71",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
     {
-       "key": "gzys3",
+       "key": "jpys",
        "name": "公众号[蹲街捏蚂蚁]免费分享",
        "type": 3,
-       "api": "csp_Guazi"
+       "api": "csp_Jpys"
    },
-    {
+    /**{
        "key": "jpyy",
        "name": "金牌影视",
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/jpyy.js"
-   },
+   }, */
     {
        "key": "live",
        "name": "聚合直播",
@@ -27,6 +27,19 @@
       "type": 3,
       "api": "csp_Config",
       "jar": "./danmu.php",
+      "searchable": 0,
+      "changeable": 0,
+      "indexs": 0,
+      "style": {
+        "type": "rect",
+        "ratio": 1.597
+      }
+    },
+    {
+      "key": "config",
+      "name": "网盘2┃设置",
+      "type": 3,
+      "api": "csp_Config",
       "searchable": 0,
       "changeable": 0,
       "indexs": 0,
