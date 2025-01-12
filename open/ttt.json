@@ -1,5 +1,5 @@
 {
-  "spider": "./test.jar;md5;721f2f9ee9d5d27f4ca111940ce4b619",
+  "spider": "./lsq_0112.jar;md5;8affb9918164261eaeff3d2e6fcc6ea2",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
   {
@@ -19,7 +19,7 @@
        "key": "live",
        "name": "聚合直播",
        "type": 3,
-       "api": "file://leospring/live_open.js"
+       "api": "https://d.kstore.dev/download/8943/live_open.js"
    },
     {
       "key": "网盘配置中心",
@@ -61,6 +61,18 @@
       "type": 3,
       "api": "csp_Wogg"
     },
+    {
+      "key": "muou",
+      "name": "木偶┃网盘|4K",
+      "type": 3,
+      "api": "csp_Mogg",
+      "quickSearch": 1,
+      "changeable": 1,
+      "filterable": 1,
+      "ext": {
+        //"uccookie": "http://127.0.0.1:9978/file/TV/.uc"
+      }
+    },
    {
       "key": "jianpian",
       "name": "🐭荐片┃P2P",
@@ -76,7 +88,7 @@
         "key": "saohuo",
         "name": "骚火影视",
         "type": 3,
-        "api": "file://leospring/saohuo_open.js"
+        "api": "https://d.kstore.dev/download/8943/saohuo.js"
    },
     {
         "key": "nm",
@@ -142,7 +154,7 @@
        "name": "🐱追剧猫",
        "type": 3,
        "api": "csp_Mito",
-       "ext": "http://mito.minotv.cn|1.1.0"
+       "ext": "http://mito.minotv.cn|2.2.0"
        //"api": "https://d.kstore.dev/download/8943/mito_open.js"
    },
     {
@@ -773,7 +785,8 @@
       "api": "csp_TgSearch",
       "searchable": 1,
       "quickSearch": 0,
-      "ext": "https://tgzx.banye.tech:7777"
+      //"ext": "https://tgzx.aera.eu.org"
+      "ext": "http://tgsou.fish2018.us.kg"
     },
     {
       "key": "Bili",
@@ -932,7 +945,7 @@
     {
         "name": "4K解析",
         "type": 1,
-        "url": "http://jx.jwl.icu/jx.php?url=",
+        "url": "https://zy.qiaoji8.com/neibu.php?url=",
         "ext": {
             "flag": [
                 "qq",
@@ -1005,7 +1018,7 @@
   ],
   "lives": [
   	{
-      "name":"牛播一（新版影视仓/ok影视）",
+      "name":"最强直播",
       "type":0,
       "url":"http://127.0.0.1:9978/proxy?do=live&type=liveList",
       "playerType":1,
@@ -1037,6 +1050,26 @@
       "type": 0,
       "url": "https://live.fanmingming.com/tv/m3u/ipv6.m3u",
       "playerType": 1
+    },
+    {
+      "name": "IPV4",
+      "type": 0,
+      "url": "https://ghgo.xyz/raw.githubusercontent.com/MemoryCollection/IPTV/refs/heads/main/multicast.txt",
+      "playerType": 1,
+      "logo": "https://ghgo.xyz/raw.githubusercontent.com/fanmingming/live/refs/heads/main/tv/{name}.png"
+    },
+    {
+      "name": "IPV6①",
+      "type": 0,
+      "url": "https://ghgo.xyz/raw.githubusercontent.com/YanG-1989/m3u/refs/heads/main/Gather.m3u",
+      "playerType": 1
+    },
+    {
+      "name": "平台直播",
+      "type": 0,
+      "url": "http://tv.iill.top/m3u/Live",
+      "ua": "okhttp/3.15",
+      "playerType": 2
     }
   ]
 }
