@@ -63,7 +63,7 @@
         "key": "saohuo",
         "name": "骚火影视",
         "type": 3,
-        "api": "./saohuo_open.js"
+        "api": "https://d.kstore.dev/download/8943/saohuo_open.js"
    },
     {
         "key": "nm",
