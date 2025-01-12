@@ -73,14 +73,14 @@
    },
     {
        "key": "gzys",
-       "name": "瓜子影视",
+       "name": "瓜子影视|2K",
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/gzys.js"
    },
     {
        "key": "gzys3",
-       "name": "瓜子2",
+       "name": "瓜子2|2K",
        "type": 3,
        "api": "csp_Guazi"
    },
@@ -153,12 +153,6 @@
        "type": 3,
        "api": "https://d.kstore.dev/download/8943/ky_open.js",
        "ext": "http://getapp.tvybapp.com|mick2458mick2458|mick2458mick2458"
-   },
-    {
-       "key": "ydpan",
-       "name": "YD盘",
-       "type": 3,
-       "api": "./ydpan.js"
    },
     {
       "key": "🌟客星",
