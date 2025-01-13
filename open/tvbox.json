@@ -364,13 +364,13 @@
       "type": "list"
     }
 },
-    /** {
+ {
        "key": "4kav",
        "name": "4K-诶喂",
        "type": 3,
        "api": "./lsq_open.js",
        "ext": "https://d.kstore.dev/download/8943/4kav.js"
-   },*/
+   },
     {
         "key": "星芽",
         "name": "🌟星芽┃短剧",
