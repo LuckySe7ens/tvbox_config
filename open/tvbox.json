@@ -470,20 +470,7 @@
        "type": 3,
        "api": "./littleApple_open.js"
    },
-   /**  {
-      "key": "stripchat_live",
-      "name": "jav直播",
-      "type": 3,
-      "api": "./lsq_open.js",
-      "ext": "https://d.kstore.dev/download/8943/stripchat_live.js"
-    },
-   {
-      "key": "javsb",
-      "name": "javsb",
-      "type": 3,
-      "api": "./lsq_open.js",
-      "ext": "https://d.kstore.dev/download/8943/javsb.js"
-    },
+   /** 
     {
        "key": "netflixgc",
        "name": "奈飞工厂",
