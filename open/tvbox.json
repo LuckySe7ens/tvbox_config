@@ -1,5 +1,5 @@
 {
-  "spider": "https://d.kstore.dev/download/8943/file/lsq.jar;md5;a0b645693c4c435a8ce783cb69558161",
+  "spider": "https://d.kstore.dev/download/8943/file/lsq.jar;md5;2dec4ce129539fb69cd3d284804e0075",
   "wallpaper": "https://深色壁纸.饭.eu.org/",
   "sites": [
   {
@@ -361,9 +361,9 @@
    }, 
    {
       "key": "iktv",
-      "name": "iktv",
+      "name": "iktv|音乐",
       "type": 3,
-      "api": "csp_Iktv|音乐",
+      "api": "csp_Iktv",
       "searchable": 1,
       "quickSearch": 1,
       "changeable": 1
@@ -523,6 +523,18 @@
       "quickSearch": 0,
       "ext": {
       	"site":"zyfb123",
+        "proxy":"https://proxy.leospring.eu.org/url="
+      }
+    },
+    {
+      "key": "tg|xunlei",
+      "name": "TG搜┃迅雷",
+      "type": 3,
+      "api": "csp_Tgsearch2",
+      "searchable": 1,
+      "quickSearch": 0,
+      "ext": {
+      	"site":"xunleizyfb",
         "proxy":"https://proxy.leospring.eu.org/url="
       }
     },
