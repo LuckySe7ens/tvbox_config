@@ -269,7 +269,8 @@
        "name": "小苹果",
        "type": 3,
        "playType": 1,
-       "api": "file://leospring/littleApple_open.js"
+       "api": "file://leospring/littleApple_open.js",
+       "ext": "http://c.xpgtv.net"
    },
     {
         "key": "星芽",
