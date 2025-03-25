@@ -6,7 +6,7 @@
        "key": "nm",
        "name": "公众号[蹲街捏蚂蚁]免费分享",
        "type": 3,
-       "api": "https://d.kstore.dev/download/8943/js/nongmin.js"
+       "api": "https://d.kstore.dev/download/8943/js/open_nongmin.js"
    },
    {
        "key": "living",
@@ -57,18 +57,18 @@
       "api": "csp_Wogg",
       "ext": "https://wogg.xxooo.cf"
     },
-        {
+    {
        "key": "ydpan",
        "name": "YD盘┃4K",
        "type": 3,
        "playerType": "1",
-       "api": "https://d.kstore.dev/download/8943/ydpan.js"
+       "api": "https://d.kstore.dev/download/8943/open_ydpan.js"
    },
    {
      "key": "leijing",
      "name": "TY盘┃4K",
      "type": 3,
-     "api": "https://d.kstore.dev/download/8943/js/leijing.js"
+     "api": "https://d.kstore.dev/download/8943/js/open_leijing.js"
    },
    {
        "key": "4kav",
@@ -81,7 +81,7 @@
         "key": "saohuo",
         "name": "骚火┃极速",
         "type": 3,
-        "api": "https://d.kstore.dev/download/8943/saohuo.js"
+        "api": "https://d.kstore.dev/download/8943/open_saohuo.js"
    },
     {
         "key": "jpys",
