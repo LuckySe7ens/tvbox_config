@@ -1,5 +1,5 @@
 ## 自学flutter，参考猫影视和FongMi影视的思想和UI的，使用flutter + nodejs开发ant影视，支持影视的t1(cms api)、t4 类型的配置 和 猫的nodejs 配置
-### t1 & t4配置 [https://slink.ltd/https://raw.githubusercontent.com/LuckySe7ens/tvbox_config/master/config/api.json](https://slink.ltd/https://raw.githubusercontent.com/LuckySe7ens/tvbox_config/master/config/api.json)
+### t1 & t4配置 [https://d.kstore.dev/download/8943/nodejs/api.json](https://d.kstore.dev/download/8943/nodejs/api.json)
 ```
 {
 	"sites": [{
@@ -37,7 +37,7 @@
 ```
 
 ### nodejs配置地址：
-[https://slink.ltd/https://raw.githubusercontent.com/LuckySe7ens/tvbox_config/master/config/index.js.md5](https://slink.ltd/https://raw.githubusercontent.com/LuckySe7ens/tvbox_config/master/config/index.js.md5)
+[https://14256.kstore.space/index.js.md5](https://14256.kstore.space/index.js.md5)
 
 ## 相关截图
 
